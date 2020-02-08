@@ -9,9 +9,7 @@
     "start": "npm run develop",
     "build": "gatsby build --prefix-paths",
     "serve": "gatsby serve",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
     "@material-ui/core": "^3.9.3",
@@ -32,13 +30,5 @@
     "react-jss": "^8.6.1",
     "react-swipeable-views": "^0.13.1",
     "react-swipeable-views-utils": "^0.13.1"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.8.4",
-    "@storybook/addon-actions": "^5.3.12",
-    "@storybook/addon-links": "^5.3.12",
-    "@storybook/addons": "^5.3.12",
-    "@storybook/react": "^5.3.12",
-    "babel-loader": "^8.0.6"
   }
 }

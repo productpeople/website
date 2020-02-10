@@ -9,7 +9,7 @@ import Typography from "@material-ui/core/Typography";
 import withStyles from "@material-ui/styles/withStyles";
 
 const styles = {
-  rootEl: {
+  card: {
     width: "331px",
     height: "412px",
     left: "22px",
@@ -17,7 +17,8 @@ const styles = {
     background: "#FFFFFF",
     boxShadow: "0px 2px 50px rgba(0, 0, 0, 0.05)",
     borderRadius: "5px",
-    margin: "20px"
+    margin: "20px",
+    overflow: "visible"
   },
   deliveryTimeBox: {
     zIndex: "99",
@@ -73,7 +74,7 @@ const styles = {
 
 const CardServices = ({ classes, item = {} }) => {
   return (
-    <Card className={classes.rootEl}>
+    <Card className={classes.card}>
       <Card className={classes.deliveryTimeBox}>
         <Typography classes={{ root: classes.deliveryTimeBoxText }}>
           {item.deliveryTimeBox.text}

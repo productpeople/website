@@ -1,8 +1,8 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import withStyles from "@material-ui/styles/withStyles";
+import makeStyles from "@material-ui/styles/makeStyles";
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   root: {
     padding: "20px",
     background: "transparent"
@@ -30,9 +30,12 @@ const styles = theme => ({
     textAlign: "center",
     letterSpacing: "0.833333px"
   }
-});
+}));
 
-const TextSectionSmallTitle = ({ classes, title, text }) => {
+const TextSectionSmallTitle = () => {
+  const { title, text } = props;
+  const classes = useStyles();
+
   return (
     <div>
       <Typography classes={{ root: classes.title }}>{title}</Typography>
@@ -41,4 +44,4 @@ const TextSectionSmallTitle = ({ classes, title, text }) => {
   );
 };
 
-export default withStyles(styles)(TextSectionSmallTitle);
+export default TextSectionSmallTitle;

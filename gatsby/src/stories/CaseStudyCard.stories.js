@@ -1,7 +1,7 @@
 import React from "react";
-import CardCaseStudy from "../components/CardCaseStudy";
+import CaseStudyCard from "../components/CaseStudyCard";
 
-export default { title: "CardCaseStudy" };
+export default { title: "CaseStudyCard" };
 
 const defProps = {
 	imgHeight: `358px`,
@@ -26,4 +26,4 @@ const items = [
 	},
 ];
 
-export const a = () => items.map(c => <CardCaseStudy item={c} />);
+export const a = () => items.map(c => <CaseStudyCard item={c} />);

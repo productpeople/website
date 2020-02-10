@@ -47,7 +47,7 @@ const styles = {
 	},
 };
 
-const CardCaseStudy = ({ classes, item = {} }) => {
+const CaseStudyCard = ({ classes, item = {} }) => {
 	return (
 		<Card className={classes.root}>
 			<CardActionArea>
@@ -79,4 +79,4 @@ const CardCaseStudy = ({ classes, item = {} }) => {
 	);
 };
 
-export default withStyles(styles)(CardCaseStudy);
+export default withStyles(styles)(CaseStudyCard);

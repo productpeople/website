@@ -3,9 +3,9 @@ import { StaticQuery, graphql } from "gatsby";
 import Divider from "@material-ui/core/Divider";
 import Typography from "@material-ui/core/Typography";
 import Hidden from "@material-ui/core/Hidden";
-import withStyles from '@material-ui/styles/withStyles';
+import makeStyles from "@material-ui/styles/makeStyles";
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   divider: {
     marginTop: theme.spacing.unit * 6,
     marginBottom: theme.spacing.unit * 3,
@@ -16,9 +16,9 @@ const styles = theme => ({
   }
 });
 
-const Footer = withStyles(styles)(props => {
+const Footer = props => {
+  const classes = useStyles();
   const {
-    classes,
     data: {
       site: {
         siteMetadata: {

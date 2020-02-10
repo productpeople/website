@@ -4,6 +4,7 @@ import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { makeStyles } from "@material-ui/styles";
 import Paper from "@material-ui/core/Paper";
+import Grid from "@material-ui/core/Grid";
 
 import withRoot from "../utils/withRoot";
 import SEO from "../components/SEO";
@@ -22,6 +23,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const components = {
+  Grid,
   Link
 };
 

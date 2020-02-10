@@ -8,7 +8,7 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import Typography from "@material-ui/core/Typography";
 import withStyles from "@material-ui/styles/withStyles";
 
-const styles = {
+const styles = theme => ({
   root: {
     borderRadius: "0px 0px 6px 6px",
     width: "331px",
@@ -31,7 +31,7 @@ const styles = {
     color: "#FFFFFF"
   },
   cardSubtitle: {
-    fontFamily: "Roboto Mono",
+    fontFamily: theme.monoFont,
     fontStyle: "normal",
     fontWeight: "normal",
     fontSize: "12px",
@@ -45,7 +45,7 @@ const styles = {
     objectFit: "cover"
     // width: "auto",
   }
-};
+});
 
 const CaseStudyCard = ({ classes, item = {} }) => {
   return (

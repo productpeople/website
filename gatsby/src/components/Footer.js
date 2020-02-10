@@ -8,13 +8,13 @@ import makeStyles from "@material-ui/styles/makeStyles";
 const useStyles = makeStyles(theme => ({
   divider: {
     marginTop: theme.spacing.unit * 6,
-    marginBottom: theme.spacing.unit * 3,
+    marginBottom: theme.spacing.unit * 3
   },
   footer: {
     marginBottom: theme.spacing.unit * 3,
-    whiteSpace: 'nowrap',
+    whiteSpace: "nowrap"
   }
-});
+}));
 
 const Footer = props => {
   const classes = useStyles();
@@ -23,18 +23,16 @@ const Footer = props => {
       site: {
         siteMetadata: {
           title,
-          contact: { email, phone },
-        },
-      },
-    },
+          contact: { email, phone }
+        }
+      }
+    }
   } = props;
+
   return (
     <>
       <Divider className={classes.divider} />
-      <footer
-        className={classes.footer}
-        id="footer"
-      >
+      <footer className={classes.footer} id="footer">
         <span>
           <Typography variant="caption" component="span">
             ©{new Date().getFullYear()} {title}{" "}
@@ -53,23 +51,29 @@ const Footer = props => {
       </footer>
     </>
   );
-});
+};
 
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            contact {
-              email
-              phone
+const Wrapped = props => {
+  return (
+    <StaticQuery
+      query={graphql`
+        query {
+          site {
+            siteMetadata {
+              title
+              contact {
+                email
+                phone
+              }
             }
           }
         }
-      }
-    `}
-    render={data => <Footer data={data} />}
-  />
-);
+      `}
+      render={data => {
+        return <Footer data={data} />;
+      }}
+    />
+  );
+};
+
+export default Wrapped;

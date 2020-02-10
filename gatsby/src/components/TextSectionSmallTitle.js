@@ -13,10 +13,10 @@ const styles = {
 		fontWeight: 500,
 		fontSize: "12px",
 		lineHeight: "30px",
-		/* identical to box height, or 250% */
 		textAlign: "center",
 		letterSpacing: "4px",
 		color: "#000000",
+		marginBottom: "20px !important",
 	},
 	text: {
 		fontFamily: "Red Hat Display",

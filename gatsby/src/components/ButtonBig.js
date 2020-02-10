@@ -9,6 +9,7 @@ const styles = {
 		borderRadius: "20px !important",
 		height: "48px",
 		width: "232px",
+		margin: "0 auto !important",
 	},
 	text: {
 		// fontFamily: "Red Hat Display",

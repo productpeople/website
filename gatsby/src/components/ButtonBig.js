@@ -11,7 +11,7 @@ const styles = {
 };
 
 const ButtonBig = ({ classes, item = {} }) => {
-	return <Button className={classes.root}>{item.text}</Button>;
+	return <Button classes={{ root: classes.root }}>{item.text}</Button>;
 };
 
 export default withStyles(styles)(ButtonBig);

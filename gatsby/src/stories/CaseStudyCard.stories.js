@@ -1,28 +1,28 @@
-import React from "react";
-import CaseStudyCard from "../components/CaseStudyCard";
+import React from 'react';
+import CaseStudyCard from '../components/CaseStudyCard';
 
-export default { title: "CaseStudyCard" };
+export default { title: 'CaseStudyCard' };
 
 const defProps = {
   imgHeight: `358px`,
-  subtitle: "Interim Product Management"
+  subtitle: 'Interim Product Management'
 };
 const items = [
   {
     ...defProps,
-    imgURL: "/images/case study - 1 omio.png",
-    title: "Omio"
+    imgURL: '/images/case study - 1 omio.png',
+    title: 'omio'
   },
   {
     ...defProps,
-    imgURL: "/images/case study - 2 heycar.png",
-    title: "hey car"
+    imgURL: '/images/case study - 2 heycar.png',
+    title: 'hey car'
   },
   {
     ...defProps,
-    imgURL: "/images/case study - 3 koerber digital.png",
-    title: "Körber Digital",
-    subtitle: "MVP Scoping and Rollout"
+    imgURL: '/images/case study - 3 koerber digital.png',
+    title: 'Körber Digital',
+    subtitle: 'MVP Scoping and Rollout'
   }
 ];
 

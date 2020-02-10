@@ -10,17 +10,17 @@ const defProps = {
 const items = [
 	{
 		...defProps,
-		imgURL: "/static/case study - 1 omio.png",
+		imgURL: "/images/case study - 1 omio.png",
 		title: "Omio",
 	},
 	{
 		...defProps,
-		imgURL: "/static/case study - 2 heycar.png",
+		imgURL: "/images/case study - 2 heycar.png",
 		title: "hey car",
 	},
 	{
 		...defProps,
-		imgURL: "/static/case study - 3 koerber digital.png",
+		imgURL: "/images/case study - 3 koerber digital.png",
 		title: "Körber Digital",
 		subtitle: "MVP Scoping and Rollout",
 	},

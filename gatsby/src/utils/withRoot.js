@@ -8,6 +8,7 @@ import Hidden from "@material-ui/core/Hidden";
 import { createMuiTheme } from "@material-ui/core";
 
 const theme = createMuiTheme({
+  monoFont: "'Roboto Mono,monospace",
   typography: {
     fontFamily: ["'Red Hat Display'", "sans-serif"].join(","),
     h1: { fontWeight: 900 },

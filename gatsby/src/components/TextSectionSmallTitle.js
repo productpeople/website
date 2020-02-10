@@ -2,15 +2,15 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 import withStyles from "@material-ui/styles/withStyles";
 
-const styles = {
+const styles = theme => ({
   root: {
     padding: "20px",
     background: "transparent"
   },
   title: {
-    fontFamily: "Roboto Mono",
+    fontFamily: theme.monoFont,
     fontStyle: "normal",
-    fontWeight: 500,
+    fontWeight: 400,
     fontSize: "12px",
     lineHeight: "30px",
     /* identical to box height, or 250% */
@@ -19,7 +19,6 @@ const styles = {
     color: "#000000"
   },
   text: {
-    fontFamily: "Red Hat Display",
     fontStyle: "normal",
     fontWeight: "normal",
     fontSize: "20px",
@@ -29,7 +28,7 @@ const styles = {
     textAlign: "center",
     letterSpacing: "0.833333px"
   }
-};
+});
 
 const TextSectionSmallTitle = ({ classes, title, text }) => {
   return (

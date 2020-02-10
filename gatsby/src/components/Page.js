@@ -7,11 +7,11 @@ import "../css/style.styl";
 
 const styles = {
   container: {
-    marginTop: 94,
+    marginTop: 94
   },
   contentBox: {
     maxWidth: "calc(1136px - 60px)",
-    width: "calc(100% - 60px)",
+    width: "calc(100% - 60px)"
   },
   title: {
     textAlign: "center"
@@ -30,16 +30,9 @@ class Page extends React.Component {
           direction="row"
           justify="center"
         >
-          <Grid
-            className={classes.contentBox}
-            item
-          >
+          <Grid className={classes.contentBox} item>
             {title ? (
-              <Typography
-                className={classes.title}
-                variant="h2"
-                gutterBottom
-              >
+              <Typography className={classes.title} variant="h2" gutterBottom>
                 {title}
               </Typography>
             ) : null}

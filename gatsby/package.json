@@ -10,7 +10,7 @@
     "build": "gatsby build --prefix-paths",
     "serve": "gatsby serve",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "storybook": "start-storybook -p 6006 -s public --ci",
+    "storybook": "NODE_ENV=production start-storybook -p 6006 -s public --ci",
     "build-storybook": "build-storybook -s public"
   },
   "dependencies": {
@@ -39,6 +39,7 @@
     "@storybook/addon-links": "^5.3.12",
     "@storybook/addons": "^5.3.12",
     "@storybook/react": "^5.3.12",
-    "babel-loader": "^8.0.6"
+    "babel-loader": "^8.0.6",
+    "babel-plugin-remove-graphql-queries": "^2.7.23"
   }
 }

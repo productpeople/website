@@ -33,7 +33,7 @@ const styles = {
 
 const TextSectionSmallTitle = ({ classes, item = {} }) => {
 	return (
-		<div>
+		<div className={classes.root}>
 			<Typography classes={{ root: classes.title }}>
 				{item.title}
 			</Typography>

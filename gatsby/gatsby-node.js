@@ -2,47 +2,46 @@ const path = require("path"),
   fs = require("fs");
 
 // Create pages from markdown files.
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
-  return Promise.all(
-    ["products", "team"].map(async item => {
-      const result = await graphql(
-        `
-        query {
-          ${item}: allMarkdownRemark(
-            filter: { fileAbsolutePath: { regex: "/${item}/" } }
-            sort: { fields: [frontmatter___date], order: DESC }
-          ) {
-            edges {
-              node {
-                id
-                frontmatter {
-                  path
-                  title
-                  date(formatString: "DD MMMM YYYY")
-                }
-                excerpt
+  const mdxTemplate = path.resolve(`src/templates/mdx.js`);
+
+  return graphql(
+    `
+      query {
+        allMdx {
+          edges {
+            node {
+              id
+              frontmatter {
+                path
+                title
               }
             }
           }
         }
-      `
-      );
-      return Promise.all(
-        result.data[item].edges.map(({ node }) => {
-          const component = fs.existsSync(`src/templates/${item}.js`)
-            ? // Use specific template for item, e.g., products.js, if it exists.
-              path.resolve(`src/templates/${item}.js`)
-            : // Or use general template.
-              path.resolve(`src/templates/general.js`);
-          return createPage({
-            component,
-            path: node.frontmatter.path,
-            context: { id: node.id },
-          });
-        })
-      );
-    })
-  );
+      }
+    `
+  ).then(result => {
+    if (result.errors) {
+      reporter.panicOnBuild("Failed to load mdx query", result.errors);
+    }
+
+    console.log("result.data", result.data);
+
+    const pages = result.data.allMdx.edges;
+
+    pages.forEach(edge => {
+      const {
+        id,
+        frontmatter: { path }
+      } = edge.node;
+      createPage({
+        component: mdxTemplate,
+        path,
+        context: { id }
+      });
+    });
+  });
 };

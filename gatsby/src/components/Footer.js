@@ -1,40 +1,29 @@
 import React from "react";
-import { StaticQuery, graphql } from "gatsby";
 import Divider from "@material-ui/core/Divider";
 import Typography from "@material-ui/core/Typography";
 import Hidden from "@material-ui/core/Hidden";
-import withStyles from '@material-ui/styles/withStyles';
+import makeStyles from "@material-ui/styles/makeStyles";
 
-const styles = theme => ({
+import { title } from "../../config";
+
+const useStyles = makeStyles(theme => ({
   divider: {
     marginTop: theme.spacing.unit * 6,
-    marginBottom: theme.spacing.unit * 3,
+    marginBottom: theme.spacing.unit * 3
   },
   footer: {
     marginBottom: theme.spacing.unit * 3,
-    whiteSpace: 'nowrap',
+    whiteSpace: "nowrap"
   }
-});
+}));
 
-const Footer = withStyles(styles)(props => {
-  const {
-    classes,
-    data: {
-      site: {
-        siteMetadata: {
-          title,
-          contact: { email, phone },
-        },
-      },
-    },
-  } = props;
+const Footer = () => {
+  const classes = useStyles();
+
   return (
     <>
       <Divider className={classes.divider} />
-      <footer
-        className={classes.footer}
-        id="footer"
-      >
+      <footer className={classes.footer} id="footer">
         <span>
           <Typography variant="caption" component="span">
             ©{new Date().getFullYear()} {title}{" "}
@@ -42,34 +31,12 @@ const Footer = withStyles(styles)(props => {
             <Hidden only={["xl", "lg", "md"]}>
               <br />
             </Hidden>{" "}
-            {email} – {phone}
-            <br />
-            &middot;
-            <br />
-            Starter created by{" "}
-            <a href="https://foxandgeese.com">Fox and Geese</a>
+            {title}
           </Typography>
         </span>
       </footer>
     </>
   );
-});
+};
 
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            contact {
-              email
-              phone
-            }
-          }
-        }
-      }
-    `}
-    render={data => <Footer data={data} />}
-  />
-);
+export default Footer;

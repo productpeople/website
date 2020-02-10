@@ -1,21 +1,23 @@
 import React from "react";
-import { StaticQuery, Link, graphql } from "gatsby";
+import { Link } from "gatsby";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import IconButton from "@material-ui/core/IconButton";
 import { DotsVertical } from "mdi-material-ui";
-import withStyles from "@material-ui/styles/withStyles";
+import makeStyles from "@material-ui/styles/makeStyles";
 
-const styles = {
+import { menuLinks } from "./Menu";
+
+const useStyles = makeStyles(theme => ({
   dotsVerticalIcon: {
     color: "#efefef"
   }
-};
+}));
 
 class MenuMobile extends React.Component {
   state = {
-    anchorEl: null,
+    anchorEl: null
   };
 
   handleOpen = event => {
@@ -27,17 +29,9 @@ class MenuMobile extends React.Component {
   };
 
   render() {
+    const classes = useStyles();
     const { anchorEl } = this.state;
-    const {
-      classes,
-      data: {
-        site: {
-          siteMetadata: {
-            menuLinks
-          }
-        }
-      }
-    } = this.props;
+
     return (
       <>
         <IconButton onClick={this.handleOpen}>
@@ -68,22 +62,4 @@ class MenuMobile extends React.Component {
   }
 }
 
-const StyledMenuMobile = withStyles(styles)(MenuMobile);
-
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query MenuMobileQuery {
-        site {
-          siteMetadata {
-            menuLinks {
-              name
-              link
-            }
-          }
-        }
-      }
-    `}
-    render={data => <StyledMenuMobile active={props.active} data={data} />}
-  />
-);
+export default MenuMobile;

@@ -1,10 +1,20 @@
 // See https://github.com/mui-org/material-ui/tree/master/examples/gatsby
-import './installMuiStyles';
+import "./installMuiStyles";
 import React from "react";
 import { StylesProvider, ThemeProvider } from "@material-ui/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import getPageContext from "./getPageContext";
 import Hidden from "@material-ui/core/Hidden";
+import { createMuiTheme } from "@material-ui/core";
+
+const theme = createMuiTheme({
+  monoFont: "'Roboto Mono,monospace",
+  typography: {
+    fontFamily: ["'Red Hat Display'", "sans-serif"].join(","),
+    h1: { fontWeight: 900 },
+    h2: { fontWeight: 900 }
+  }
+});
 
 function withRoot(Component) {
   class WithRoot extends React.Component {
@@ -29,9 +39,7 @@ function withRoot(Component) {
         >
           {/* ThemeProvider makes the theme available down the React
           tree thanks to React context. */}
-          <ThemeProvider
-            theme={this.muiPageContext.theme}
-          >
+          <ThemeProvider theme={theme}>
             {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
             <CssBaseline />
             <Hidden implementation="css">

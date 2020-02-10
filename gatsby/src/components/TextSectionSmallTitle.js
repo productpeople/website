@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const TextSectionSmallTitle = () => {
+const TextSectionSmallTitle = props => {
   const { title, text } = props;
   const classes = useStyles();
 

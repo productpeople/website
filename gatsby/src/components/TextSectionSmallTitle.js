@@ -19,6 +19,7 @@ const styles = theme => ({
     color: "#000000"
   },
   text: {
+    marginTop: 30,
     fontStyle: "normal",
     fontWeight: "normal",
     fontSize: "20px",

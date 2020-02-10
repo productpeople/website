@@ -9,7 +9,9 @@ import { createMuiTheme } from "@material-ui/core";
 
 const theme = createMuiTheme({
   typography: {
-    fontFamily: ["'Red Hat Display'", "sans-serif"].join(",")
+    fontFamily: ["'Red Hat Display'", "sans-serif"].join(","),
+    h1: { fontWeight: 900 },
+    h2: { fontWeight: 900 }
   }
 });
 

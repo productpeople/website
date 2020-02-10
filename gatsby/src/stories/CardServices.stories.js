@@ -1,22 +1,29 @@
-import React from "react";
-import CardServices from "../components/CardServices";
+import React from 'react';
+import CardServices from '../components/CardServices';
 
-export default { title: "CardServices" };
+export default { title: 'CardServices' };
 
 const items = [
-	{
-		deliveryTimeBox: {
-			text: "1-2 days",
-		},
-		image: {
-			height: "auto",
-			imageURL: "/images/CardService-draftImage.png",
-		},
-		title: "Product Management Training",
-		subtitle: "Discovery, Delivery, Metrics",
-	},
+  {
+    overlappingBoxText: '1-2 days',
+    imageURL: '/images/product-management-training-2x.png',
+    title: 'Product Management Training',
+    subtitle: 'Discovery, Delivery, Metrics'
+  },
+  {
+    overlappingBoxText: '1-2 days',
+    imageURL: '/images/product-team-appraisal-2x.png',
+    title: 'Product Team Appraisal',
+    subtitle: 'People, Product, Processes'
+  },
+  {
+    overlappingBoxText: '1-2 days',
+    imageURL: '/images/interim-product-manager-2x.png',
+    title: 'Interim Product Management',
+    subtitle: 'Embedded in the team'
+  }
 ];
 
-export const Mobile = () => {
-	return items.map((item, idx) => <CardServices key={idx} item={item} />);
-};
+export const First = () => <CardServices {...items[0]} />;
+export const Second = () => <CardServices {...items[1]} />;
+export const Third = () => <CardServices {...items[2]} />;

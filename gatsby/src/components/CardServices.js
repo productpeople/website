@@ -20,7 +20,7 @@ const styles = {
     margin: '20px',
     overflow: 'visible'
   },
-  deliveryTimeBox: {
+  overlappingBox: {
     zIndex: '99',
     transform: 'translate(0, -50%)',
     margin: '0 auto',
@@ -32,7 +32,7 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center'
   },
-  deliveryTimeBoxText: {
+  overlappingBoxText: {
     fontStyle: 'normal',
     fontWeight: 'bold',
     fontSize: '12px',
@@ -56,42 +56,40 @@ const styles = {
     fontWeight: '500',
     fontSize: '16px',
     lineHeight: '21px',
-    display: 'flex',
-    alignItems: 'center',
     textAlign: 'center',
     letterSpacing: '1.14286px',
     color: '#000000'
-    // marginBottom: "31px",
   },
   cardHeader: {
-    paddingBottom: '31px',
-    clear: 'both'
-  }
+    padding: '30px'
+  },
+  cardMedia: {}
 };
 
-const CardServices = ({ classes, item = {} }) => {
+const CardServices = props => {
+  const { classes, imageURL, overlappingBoxText, title, subtitle } = props;
   return (
     <Card className={classes.card}>
-      <Card className={classes.deliveryTimeBox}>
-        <Typography classes={{ root: classes.deliveryTimeBoxText }}>
-          {item.deliveryTimeBox.text}
+      <Card className={classes.overlappingBox}>
+        <Typography classes={{ root: classes.overlappingBoxText }}>
+          {overlappingBoxText}
         </Typography>
       </Card>
       <CardMedia
         className={classes.cardMedia}
         component="img"
-        alt={item.title}
-        height={item.image.height}
+        alt={title}
+        height={'auto'}
         // src={withPrefix(imgURL)}
-        src={item.image.imageURL}
-        title={item.title}
+        src={imageURL}
+        title={title}
       />
       <CardContent classes={{ root: classes.cardHeader }}>
         <Typography classes={{ root: classes.title }} component="h1">
-          {item.title}
+          {title}
         </Typography>
         <Typography classes={{ root: classes.subtitle }} component="h1">
-          {item.subtitle}
+          {subtitle}
         </Typography>
       </CardContent>
     </Card>

@@ -1,33 +1,38 @@
+const config = require("./config");
+
 module.exports = {
   pathPrefix: "/gatsby-material-ui-business-starter",
   siteMetadata: {
-    title: "Gatsby Material UI Business Starter",
-    contact: {
-      phone: "503-555-1111",
-      email: "hi@foxandgeese.com",
-    },
-    menuLinks: [
-      {
-        name: "Products",
-        link: "/products",
-      },
-      {
-        name: "Team",
-        link: "/team",
-      },
-    ],
+    title: config.title
   },
   plugins: [
     "gatsby-transformer-remark",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-stylus",
-    "gatsby-plugin-remove-serviceworker",
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: config.maxWidth
+            }
+          },
+          `gatsby-remark-external-links`
+        ]
+      }
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/pages`,
-        name: "pages",
-      },
+        path: `${__dirname}/../content/`,
+        name: "pages"
+      }
     },
-  ],
+    "gatsby-plugin-remove-serviceworker"
+  ]
 };

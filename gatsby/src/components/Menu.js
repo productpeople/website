@@ -1,25 +1,26 @@
 import React from "react";
-import { StaticQuery, Link, graphql } from "gatsby";
+import { Link } from "gatsby";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import { GithubCircle } from "mdi-material-ui";
-import withStyles from "@material-ui/styles/withStyles";
+import makeStyles from "@material-ui/styles/makeStyles";
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   menuButton: {
     color: theme.palette.primary.contrastText
   }
-});
+}));
 
-const Menu = withStyles(styles)(props => {
-  const {
-    classes,
-    data: {
-      site: {
-        siteMetadata: { menuLinks }
-      }
-    }
-  } = props;
+export const menuLinks = [
+  {
+    name: "Foo",
+    link: "/foo"
+  }
+];
+
+const Menu = props => {
+  const classes = useStyles();
+
   return (
     <>
       {menuLinks.map(link => (
@@ -38,22 +39,6 @@ const Menu = withStyles(styles)(props => {
       </a>
     </>
   );
-});
+};
 
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            menuLinks {
-              name
-              link
-            }
-          }
-        }
-      }
-    `}
-    render={data => <Menu data={data} />}
-  />
-);
+export default Menu;

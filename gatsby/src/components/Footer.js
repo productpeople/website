@@ -1,9 +1,10 @@
 import React from "react";
-import { StaticQuery, graphql } from "gatsby";
 import Divider from "@material-ui/core/Divider";
 import Typography from "@material-ui/core/Typography";
 import Hidden from "@material-ui/core/Hidden";
 import makeStyles from "@material-ui/styles/makeStyles";
+
+import { title } from "../../config";
 
 const useStyles = makeStyles(theme => ({
   divider: {
@@ -16,18 +17,8 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Footer = props => {
+const Footer = () => {
   const classes = useStyles();
-  const {
-    data: {
-      site: {
-        siteMetadata: {
-          title,
-          contact: { email, phone }
-        }
-      }
-    }
-  } = props;
 
   return (
     <>
@@ -40,12 +31,7 @@ const Footer = props => {
             <Hidden only={["xl", "lg", "md"]}>
               <br />
             </Hidden>{" "}
-            {email} – {phone}
-            <br />
-            &middot;
-            <br />
-            Starter created by{" "}
-            <a href="https://foxandgeese.com">Fox and Geese</a>
+            {title}
           </Typography>
         </span>
       </footer>
@@ -53,27 +39,4 @@ const Footer = props => {
   );
 };
 
-const Wrapped = props => {
-  return (
-    <StaticQuery
-      query={graphql`
-        query {
-          site {
-            siteMetadata {
-              title
-              contact {
-                email
-                phone
-              }
-            }
-          }
-        }
-      `}
-      render={data => {
-        return <Footer data={data} />;
-      }}
-    />
-  );
-};
-
-export default Wrapped;
+export default Footer;

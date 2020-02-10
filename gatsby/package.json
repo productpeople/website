@@ -10,7 +10,7 @@
     "build": "gatsby build --prefix-paths",
     "serve": "gatsby serve",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "storybook": "NODE_ENV=production start-storybook -p 6006 -s public --ci",
+    "storybook": "start-storybook -p 6006 -s public --ci",
     "build-storybook": "build-storybook -s public"
   },
   "dependencies": {

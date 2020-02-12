@@ -9,9 +9,9 @@ import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/styles/withStyles';
 
 const styles = {
-  card: {
+  cardRoot: {
     width: '331px',
-    height: '412px',
+    // height: '412px',
     left: '22px',
     top: '1269px',
     background: '#FFFFFF',
@@ -43,7 +43,7 @@ const styles = {
   },
   title: {
     fontStyle: 'normal',
-    fontWeight: '900',
+    fontWeight: 700,
     fontSize: '24px',
     lineHeight: '28px',
     textAlign: 'center',
@@ -53,7 +53,7 @@ const styles = {
   },
   subtitle: {
     fontStyle: 'normal',
-    fontWeight: '500',
+    fontWeight: 400,
     fontSize: '16px',
     lineHeight: '21px',
     textAlign: 'center',
@@ -69,7 +69,7 @@ const styles = {
 const CardServices = props => {
   const { classes, imageURL, overlappingBoxText, title, subtitle } = props;
   return (
-    <Card className={classes.card}>
+    <Card className={classes.cardRoot}>
       <Card className={classes.overlappingBox}>
         <Typography classes={{ root: classes.overlappingBoxText }}>
           {overlappingBoxText}

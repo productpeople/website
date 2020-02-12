@@ -13,20 +13,18 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 400,
     fontSize: '12px',
     lineHeight: '30px',
-    /* identical to box height, or 250% */
     textAlign: 'center',
     letterSpacing: '4px',
     color: '#000000',
+    marginTop: '120px',
     marginBottom: '20px'
   },
   text: {
-    marginTop: 30,
+    marginTop: '20px',
     fontStyle: 'normal',
-    fontWeight: 'normal',
+    fontWeight: 400,
     fontSize: '20px',
     lineHeight: '26px',
-    // display: "flex",
-    // align-items: "center",
     textAlign: 'center',
     letterSpacing: '0.833333px'
   }

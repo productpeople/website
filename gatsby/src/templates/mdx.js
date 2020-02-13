@@ -4,11 +4,22 @@ import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { makeStyles } from "@material-ui/styles";
 import Paper from "@material-ui/core/Paper";
-import Grid from "@material-ui/core/Grid";
+import Grid from "@material-ui/core/GridList";
 
 import withRoot from "../utils/withRoot";
 import SEO from "../components/SEO";
 import Page from "../components/Page";
+import ButtonBig from "../components/ButtonBig";
+import ServicesCard from "../components/ServicesCard";
+import CaseStudyCard from "../components/CaseStudyCard";
+import CultureCard, {
+  CultureCardTitle,
+  CultureCardList,
+  CultureCardListItem
+} from "../components/CultureCard";
+import { GridContainer, GridItemImage } from "../components/GridComponents";
+import TextSectionSmallTitle from "../components/TextSectionSmallTitle";
+import TopSection from "../components/TopSection";
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -24,15 +35,27 @@ const useStyles = makeStyles(theme => ({
 
 const components = {
   Grid,
-  Link
+  Link,
+  ButtonBig,
+  ServicesCard,
+  CaseStudyCard,
+  CultureCard,
+  CultureCardTitle,
+  CultureCardList,
+  CultureCardListItem,
+  GridContainer,
+  GridItemImage,
+  TextSectionSmallTitle,
+  TopSection
 };
 
 const MdxPage = props => {
   const classes = useStyles();
+  debugger;
 
   const {
     body,
-    frontmatter: { title, noContainer }
+    frontmatter: { title }
   } = props.data.mdx;
 
   return (

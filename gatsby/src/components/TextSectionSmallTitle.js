@@ -1,6 +1,7 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
 import makeStyles from "@material-ui/styles/makeStyles";
+// import makeStyles from "@material-ui/core/styles/makeStyles";
 
 const useStyles = makeStyles(
   theme => ({
@@ -30,8 +31,8 @@ const useStyles = makeStyles(
       textAlign: "center",
       letterSpacing: "0.833333px"
     }
-  }),
-  { index: 1 }
+  })
+  // { index: -100 }
 );
 
 const TextSectionSmallTitle = props => {

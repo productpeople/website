@@ -1,9 +1,9 @@
-import React from 'react';
-import Card from '@material-ui/core/Card';
-import ButtonBig from './ButtonBig';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
-import withStyles from '@material-ui/styles/withStyles';
+import React from "react";
+import Card from "@material-ui/core/Card";
+import ButtonBig from "./ButtonBig";
+import CardContent from "@material-ui/core/CardContent";
+import Typography from "@material-ui/core/Typography";
+import withStyles from "@material-ui/styles/withStyles";
 
 const styles = theme => ({
   root: {
@@ -11,22 +11,22 @@ const styles = theme => ({
     // height: '100%'
   },
   cardRoot: {
-    padding: '140px 0px'
+    padding: "140px 0px"
   },
   cardContent: {
-    margin: 'auto'
+    margin: "auto"
   },
   title: {
-    margin: '0 auto',
-    textAlign: 'center',
-    maxWidth: '700px',
+    margin: "0 auto",
+    textAlign: "center",
+    maxWidth: "700px",
     fontWeight: 700,
-    fontSize: '56px',
-    lineHeight: '70px',
-    [theme.breakpoints.down('xs')]: {
-      fontSize: '30px',
-      lineHeight: '40px',
-      marginBottom: '72px'
+    fontSize: "56px",
+    lineHeight: "70px",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "30px",
+      lineHeight: "40px",
+      marginBottom: "72px"
     }
   }
 });

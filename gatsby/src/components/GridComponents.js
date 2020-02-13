@@ -8,6 +8,7 @@ const styles = {
   },
   image: {
     width: "100%",
+    maxWidth: 185 + 25 + 25,
     margin: "auto",
     padding: "40px 25px",
     filter: "grayscale(1)",

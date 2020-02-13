@@ -52,7 +52,7 @@ const CaseStudyCard = props => {
   const { classes, title, imgHeight, imgURL, subtitle } = props;
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} elevation={0}>
       <CardActionArea>
         <CardMedia
           className={classes.cardMedia}

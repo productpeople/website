@@ -70,7 +70,7 @@ const ServicesCard = props => {
   const { imageURL, overlappingBoxText, title, subtitle } = props;
   const classes = useStyles();
   return (
-    <Card className={classes.cardRoot}>
+    <Card className={classes.cardRoot} elevation={0}>
       <Card className={classes.overlappingBox}>
         <Typography classes={{ root: classes.overlappingBoxText }}>
           {overlappingBoxText}

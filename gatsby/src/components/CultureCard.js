@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "@material-ui/core/Card";
+import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
@@ -20,6 +21,11 @@ const useStyles = makeStyles(
       display: "flex",
       textAlign: "center"
     },
+    cardMedia: {
+      height: 33,
+      width: 35,
+      margin: "0 auto"
+    },
     cardContent: {
       height: "100%",
       width: "100%",
@@ -28,10 +34,10 @@ const useStyles = makeStyles(
     title: {
       fontFamily: theme.typography.fontFamily,
       fontWeight: 700,
-      fontSize: "24px",
+      fontSize: 24,
       lineHeight: "32px",
-      letterSpacing: "1px",
-      marginTop: "30px"
+      letterSpacing: 1,
+      marginTop: 24
     },
     listElement: {
       marginTop: "32px"
@@ -50,11 +56,17 @@ const useStyles = makeStyles(
 );
 
 const CultureCard = props => {
-  const { children } = props;
+  const { children, imageURL, altText } = props;
   const classes = useStyles();
   return (
-    <Card className={classes.cardRoot}>
+    <Card classes={{ root: classes.cardRoot }} elevation={0}>
       <CardContent classes={{ root: classes.cardContent }}>
+        <CardMedia
+          className={classes.cardMedia}
+          component="img"
+          alt={altText}
+          src={imageURL}
+        />
         {children}
       </CardContent>
     </Card>

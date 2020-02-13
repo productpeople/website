@@ -17,7 +17,9 @@ const useStyles = makeStyles(
       background: "#FFFFFF",
       boxShadow: "0px 2px 50px rgba(0, 0, 0, 0.05)",
       borderRadius: "5px",
-      margin: "20px",
+      // margin: "20px",
+      marginLeft: "auto",
+      marginRight: "auto",
       overflow: "visible",
       display: "flex",
       textAlign: "center"

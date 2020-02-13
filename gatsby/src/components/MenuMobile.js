@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "gatsby";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -15,51 +15,38 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-class MenuMobile extends React.Component {
-  state = {
-    anchorEl: null
+const MenuMobile = () => {
+  const [anchorEl, setAnchorEl] = useState(null);
+  const classes = useStyles();
+
+  const handleOpen = event => {
+    setAnchorEl(event.currentTarget);
   };
 
-  handleOpen = event => {
-    this.setState({ anchorEl: event.currentTarget });
+  const handleClose = () => {
+    setAnchorEl(null);
   };
 
-  handleClose = () => {
-    this.setState({ anchorEl: null });
-  };
-
-  render() {
-    const classes = useStyles();
-    const { anchorEl } = this.state;
-
-    return (
-      <>
-        <IconButton onClick={this.handleOpen}>
-          <DotsVertical className={classes.dotsVerticalIcon} />
-        </IconButton>
-        <ClickAwayListener onClickAway={this.handleClose}>
-          <Menu
-            anchorEl={anchorEl}
-            open={Boolean(anchorEl)}
-            onClose={this.handleClose}
-          >
-            {menuLinks.map(link => (
-              <Link key={link.name} to={link.link}>
-                <MenuItem>{link.name}</MenuItem>
-              </Link>
-            ))}
-            <a
-              href="https://github.com/bluepeter/gatsby-material-ui-business-starter"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <MenuItem>Fork me on Github</MenuItem>
-            </a>
-          </Menu>
-        </ClickAwayListener>
-      </>
-    );
-  }
-}
+  return (
+    <>
+      <IconButton onClick={handleOpen}>
+        <DotsVertical className={classes.dotsVerticalIcon} />
+      </IconButton>
+      <ClickAwayListener onClickAway={handleClose}>
+        <Menu
+          anchorEl={anchorEl}
+          open={Boolean(anchorEl)}
+          onClose={handleClose}
+        >
+          {menuLinks.map(link => (
+            <Link key={link.name} to={link.link}>
+              <MenuItem>{link.name}</MenuItem>
+            </Link>
+          ))}
+        </Menu>
+      </ClickAwayListener>
+    </>
+  );
+};
 
 export default MenuMobile;

@@ -1,5 +1,4 @@
-const path = require("path"),
-  fs = require("fs");
+const path = require("path");
 
 // Create pages from markdown files.
 exports.createPages = ({ graphql, actions, reporter }) => {
@@ -27,8 +26,6 @@ exports.createPages = ({ graphql, actions, reporter }) => {
     if (result.errors) {
       reporter.panicOnBuild("Failed to load mdx query", result.errors);
     }
-
-    console.log("result.data", result.data);
 
     const pages = result.data.allMdx.edges;
 

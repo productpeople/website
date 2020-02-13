@@ -33,6 +33,7 @@ exports.createPages = ({ graphql, actions, reporter }) => {
         id,
         frontmatter: { path }
       } = edge.node;
+
       createPage({
         component: mdxTemplate,
         path,

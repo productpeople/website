@@ -8,7 +8,7 @@ import withStyles from "@material-ui/styles/withStyles";
 const styles = theme => ({
   root: {},
   cardRoot: {
-    padding: "140px 0px",
+    padding: "100px 0px",
     background: "#FFFFFF",
     boxShadow: "0px 2px 50px rgba(0, 0, 0, 0.02) !important",
     borderRadius: 6,

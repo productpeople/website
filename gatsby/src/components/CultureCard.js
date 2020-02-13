@@ -11,6 +11,7 @@ import makeStyles from "@material-ui/styles/makeStyles";
 const useStyles = makeStyles(
   theme => ({
     cardRoot: {
+      width: "100%",
       maxWidth: "331px",
       height: "412px",
       background: "#FFFFFF",

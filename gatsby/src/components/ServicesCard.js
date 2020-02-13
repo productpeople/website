@@ -1,9 +1,9 @@
-import React from 'react';
-import Card from '@material-ui/core/Card';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
-import makeStyles from '@material-ui/styles/makeStyles';
+import React from "react";
+import Card from "@material-ui/core/Card";
+import CardMedia from "@material-ui/core/CardMedia";
+import CardContent from "@material-ui/core/CardContent";
+import Typography from "@material-ui/core/Typography";
+import makeStyles from "@material-ui/styles/makeStyles";
 
 const useStyles = makeStyles(theme => ({
   cardRoot: {
@@ -73,7 +73,7 @@ const ServicesCard = props => {
         className={classes.cardMedia}
         component="img"
         alt={title}
-        height={'auto'}
+        height={"auto"}
         // src={withPrefix(imgURL)}
         src={imageURL}
         title={title}

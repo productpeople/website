@@ -14,7 +14,7 @@ const useStyles = makeStyles(
       fontStyle: "normal",
       fontWeight: 400,
       fontSize: 12,
-      lineHeight: 30,
+      lineHeight: "30px",
       textAlign: "center",
       letterSpacing: 4,
       color: "#000000",
@@ -26,7 +26,7 @@ const useStyles = makeStyles(
       fontStyle: "normal",
       fontWeight: 400,
       fontSize: 20,
-      lineHeight: 26,
+      lineHeight: "26px",
       textAlign: "center",
       letterSpacing: "0.833333px"
     }

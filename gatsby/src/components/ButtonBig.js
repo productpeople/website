@@ -29,11 +29,14 @@ const styles = {
 };
 
 const ButtonBig = props => {
-  const { classes, text } = props;
+  const { classes, text, link } = props;
+
   return (
-    <Button classes={{ root: classes.rootEl, label: classes.text }}>
-      {text}
-    </Button>
+    <a href={link} target="_blank" rel="noopener noreferrer">
+      <Button classes={{ root: classes.rootEl, label: classes.text }}>
+        {text}
+      </Button>
+    </a>
   );
 };
 

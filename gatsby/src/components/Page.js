@@ -11,8 +11,10 @@ const useStyles = makeStyles(
       marginTop: 94
     },
     contentBox: {
-      maxWidth: "calc(1136px - 44px)",
-      width: "calc(100% - 44px)"
+      [theme.breakpoints.up("md")]: {
+        maxWidth: "calc(1136px - 44px)",
+        width: "calc(100% - 44px)"
+      }
     },
     title: {
       textAlign: "center"

@@ -21,7 +21,8 @@ const useStyles = makeStyles(
       top: 80,
       left: "50vw",
       width: "80vw",
-      marginLeft: "-40vw"
+      marginLeft: "-40vw",
+      boxShadow: "0px 2px 50px rgba(0, 0, 0, 0.05)"
     },
     menuClosed: {
       display: "none"
@@ -65,7 +66,10 @@ const MenuMobile = () => {
               alt={isOpen ? "Close the menu" : "Open the menu"}
             />
           </IconButton>
-          <Paper className={`${menuPaper} ${isOpen ? "" : menuClosed}`}>
+          <Paper
+            elevation={0}
+            className={`${menuPaper} ${isOpen ? "" : menuClosed}`}
+          >
             <MenuList>
               {menuLinks.map(link => (
                 <Link key={link.name} to={link.link} onClick={handleClose}>

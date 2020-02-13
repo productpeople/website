@@ -62,13 +62,13 @@ const Header = () => {
         classes={{ root: appBar }}
       >
         <Toolbar className={classes.toolbar}>
-          <div className={classes.logoWrapper}>
+          <Link to="/" className={classes.logoWrapper}>
             <img
               src="/images/product-people-logo@2x.png"
               alt="Product People Logo"
               className={classes.logo}
             />
-          </div>
+          </Link>
           <Hidden smDown>
             <Menu />
           </Hidden>

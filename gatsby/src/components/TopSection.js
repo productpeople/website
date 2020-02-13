@@ -15,7 +15,7 @@ const styles = theme => ({
     maxHeight: 580,
     background: "#FFFFFF",
     [theme.breakpoints.down("sm")]: {
-      padding: "90px 0px",
+      padding: "90px 0px 0px",
       background: "transparent",
       boxShadow: "none"
     }

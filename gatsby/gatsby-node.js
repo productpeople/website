@@ -15,7 +15,6 @@ exports.createPages = ({ graphql, actions, reporter }) => {
               id
               frontmatter {
                 path
-                title
               }
             }
           }
@@ -24,7 +23,7 @@ exports.createPages = ({ graphql, actions, reporter }) => {
     `
   ).then(result => {
     if (result.errors) {
-      reporter.panicOnBuild("Failed to load mdx query #5CZ50v", result.errors);
+      reporter.panicOnBuild("Failed to load mdx query #5CZ50vg", result.errors);
     }
 
     const pages = result.data.allMdx.edges;

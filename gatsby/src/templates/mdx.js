@@ -51,7 +51,6 @@ const components = {
 
 const MdxPage = props => {
   const classes = useStyles();
-  debugger;
 
   const {
     body,

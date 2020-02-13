@@ -4,10 +4,12 @@ import withStyles from "@material-ui/styles/withStyles";
 
 const styles = {
   root: {
-    maxWidth: "750px"
+    marginTop: 120,
+    maxWidth: 750
   },
   image: {
     width: "100%",
+    // We add double the horizontal padding to the max width
     maxWidth: 185 + 25 + 25,
     margin: "auto",
     padding: "40px 25px",

@@ -5,6 +5,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import { makeStyles } from "@material-ui/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
 
 import { maxWidth } from "../../config";
 import withRoot from "../utils/withRoot";
@@ -35,7 +36,9 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const components = {
+  Paper,
   Grid,
+  Typography,
   Link,
   ButtonBig,
   ServicesCard,

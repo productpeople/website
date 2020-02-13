@@ -2,47 +2,50 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Grid, Typography } from "@material-ui/core";
-import withStyles from "@material-ui/styles/withStyles";
 import "../css/style.styl";
+import { makeStyles } from "@material-ui/styles";
 
-const styles = {
-  container: {
-    marginTop: 94
-  },
-  contentBox: {
-    maxWidth: "calc(1136px - 44px)",
-    width: "calc(100% - 44px)"
-  },
-  title: {
-    textAlign: "center"
-  }
+const useStyles = makeStyles(
+  theme => ({
+    container: {
+      marginTop: 94
+    },
+    contentBox: {
+      maxWidth: "calc(1136px - 44px)",
+      width: "calc(100% - 44px)"
+    },
+    title: {
+      textAlign: "center"
+    }
+  }),
+  { index: 1 }
+);
+
+const Page = props => {
+  const classes = useStyles();
+  const { title, children } = props;
+
+  return (
+    <>
+      <Header />
+      <Grid
+        className={classes.container}
+        container
+        direction="row"
+        justify="center"
+      >
+        <Grid className={classes.contentBox} item>
+          {title ? (
+            <Typography className={classes.title} variant="h2" gutterBottom>
+              {title}
+            </Typography>
+          ) : null}
+          {children}
+          <Footer />
+        </Grid>
+      </Grid>
+    </>
+  );
 };
 
-class Page extends React.Component {
-  render() {
-    const { classes, title, children } = this.props;
-    return (
-      <>
-        <Header />
-        <Grid
-          className={classes.container}
-          container
-          direction="row"
-          justify="center"
-        >
-          <Grid className={classes.contentBox} item>
-            {title ? (
-              <Typography className={classes.title} variant="h2" gutterBottom>
-                {title}
-              </Typography>
-            ) : null}
-            {children}
-            <Footer />
-          </Grid>
-        </Grid>
-      </>
-    );
-  }
-}
-
-export default withStyles(styles)(Page);
+export default Page;

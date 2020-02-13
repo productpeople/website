@@ -9,47 +9,70 @@ import Chip from "@material-ui/core/Chip";
 import Avatar from "@material-ui/core/Avatar";
 import { MaterialUi } from "mdi-material-ui";
 
-import { title } from "../../config";
+import { title, background } from "../../config";
 
 import Menu from "./Menu";
 import MenuMobile from "./MenuMobile";
+import makeStyles from "@material-ui/styles/makeStyles";
+
+const useStyles = makeStyles(
+  theme => ({
+    container: {
+      // flexGrow: 1
+    },
+    appBar: {
+      // backgroundColor: background,
+      backgroundColor: "transparent",
+      boxShadow: "none"
+      // marginLeft: "auto",
+      // marginRight: "auto",
+    },
+    toolbar: {
+      marginLeft: "auto",
+      marginRight: "auto",
+      paddingTop: 20,
+      paddingLeft: 14,
+      paddingRight: 14,
+      width: "100vw",
+      [theme.breakpoints.up("md")]: {
+        maxWidth: "calc(1136px - 44px)",
+        width: "calc(100% - 44px)"
+      }
+    },
+    logoWrapper: {
+      flexGrow: 1
+    },
+    logo: {
+      maxWidth: 179
+    }
+  }),
+  { index: 1 }
+);
 
 const Header = () => {
+  const classes = useStyles();
+  const { appBar } = classes;
+
   return (
-    <AppBar id="appBar">
-      <Toolbar>
-        <Grid
-          container
-          justify="space-between"
-          alignItems="center"
-          spacing={16}
-        >
-          <Grid item>
-            <Chip
-              id="logo"
-              variant="outlined"
-              avatar={
-                <Avatar id="logoIcon">
-                  <MaterialUi />
-                </Avatar>
-              }
-              label={<Link to="/">{title}</Link>}
+    <div className={classes.container}>
+      <AppBar
+        positoin="static"
+        id="appBar"
+        color="transparent"
+        classes={{ root: appBar }}
+      >
+        <Toolbar className={classes.toolbar}>
+          <div className={classes.logoWrapper}>
+            <img
+              src="/images/product-people-logo@2x.png"
+              alt="Product People Logo"
+              className={classes.logo}
             />
-          </Grid>
-          <Grid item>
-            <Hidden smDown>
-              <Typography component="span" variant="caption">
-                <Menu />
-              </Typography>
-            </Hidden>
-            <Hidden mdUp>
-              <MenuMobile />
-            </Hidden>
-          </Grid>
-        </Grid>
-        <Grid item />
-      </Toolbar>
-    </AppBar>
+          </div>
+          <Menu />
+        </Toolbar>
+      </AppBar>
+    </div>
   );
 };
 

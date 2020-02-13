@@ -24,7 +24,6 @@ const styles = theme => ({
     fontSize: '56px',
     lineHeight: '70px',
     [theme.breakpoints.down('xs')]: {
-      fontWeight: 700,
       fontSize: '30px',
       lineHeight: '40px',
       marginBottom: '72px'

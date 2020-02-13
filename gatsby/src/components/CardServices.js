@@ -1,19 +1,13 @@
 import React from 'react';
-// import { withPrefix } from "gatsby";
 import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
-import CardActionArea from '@material-ui/core/CardActionArea';
 import Typography from '@material-ui/core/Typography';
-import withStyles from '@material-ui/styles/withStyles';
+import makeStyles from '@material-ui/styles/makeStyles';
 
-const styles = {
+const useStyles = makeStyles(theme => ({
   cardRoot: {
     width: '331px',
-    // height: '412px',
-    left: '22px',
-    top: '1269px',
     background: '#FFFFFF',
     boxShadow: '0px 2px 50px rgba(0, 0, 0, 0.05)',
     borderRadius: '5px',
@@ -62,12 +56,12 @@ const styles = {
   },
   cardHeader: {
     padding: '30px'
-  },
-  cardMedia: {}
-};
+  }
+}));
 
 const CardServices = props => {
-  const { classes, imageURL, overlappingBoxText, title, subtitle } = props;
+  const { imageURL, overlappingBoxText, title, subtitle } = props;
+  const classes = useStyles();
   return (
     <Card className={classes.cardRoot}>
       <Card className={classes.overlappingBox}>
@@ -96,4 +90,4 @@ const CardServices = props => {
   );
 };
 
-export default withStyles(styles)(CardServices);
+export default CardServices;

@@ -1,16 +1,39 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
-import Menu from "@material-ui/core/Menu";
+import MenuList from "@material-ui/core/MenuList";
 import MenuItem from "@material-ui/core/MenuItem";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import IconButton from "@material-ui/core/IconButton";
-import { DotsVertical } from "mdi-material-ui";
+import Grow from "@material-ui/core/Grow";
+import Paper from "@material-ui/core/Paper";
 import makeStyles from "@material-ui/styles/makeStyles";
+import { navigate } from "@reach/router";
 
 import { menuLinks } from "./Menu";
 
 const useStyles = makeStyles(
   theme => ({
+    icon: {
+      width: 34
+    },
+    menuPaper: {
+      position: "absolute",
+      background: "#ffffff",
+      padding: "80px 40px",
+      top: 80,
+      left: "50vw",
+      width: "80vw",
+      marginLeft: "-40vw"
+    },
+    menuClosed: {
+      display: "none"
+    },
+    menuItemRoot: {
+      fontSize: "30px",
+      lineHeight: "40px",
+      fontWeight: 700,
+      padding: 30
+    },
     dotsVerticalIcon: {
       color: "#efefef"
     }
@@ -19,34 +42,43 @@ const useStyles = makeStyles(
 );
 
 const MenuMobile = () => {
-  const [anchorEl, setAnchorEl] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
   const classes = useStyles();
+  const { menuPaper, menuClosed, menuItemRoot } = classes;
 
-  const handleOpen = event => {
-    setAnchorEl(event.currentTarget);
+  const handleOpen = () => {
+    setIsOpen(true);
   };
 
   const handleClose = () => {
-    setAnchorEl(null);
+    setIsOpen(false);
   };
+
+  const src = `/images/menu-${isOpen ? "open" : "closed"}.png`;
 
   return (
     <>
-      <IconButton onClick={handleOpen}>
-        <DotsVertical className={classes.dotsVerticalIcon} />
-      </IconButton>
       <ClickAwayListener onClickAway={handleClose}>
-        <Menu
-          anchorEl={anchorEl}
-          open={Boolean(anchorEl)}
-          onClose={handleClose}
-        >
-          {menuLinks.map(link => (
-            <Link key={link.name} to={link.link}>
-              <MenuItem>{link.name}</MenuItem>
-            </Link>
-          ))}
-        </Menu>
+        <div>
+          <IconButton
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
+          >
+            <img className={classes.icon} src={src} />
+          </IconButton>
+          <Paper className={`${menuPaper} ${isOpen ? "" : menuClosed}`}>
+            <MenuList>
+              {menuLinks.map(link => (
+                <Link key={link.name} to={link.link} onClick={handleClose}>
+                  <MenuItem classes={{ root: menuItemRoot }}>
+                    {link.name}
+                  </MenuItem>
+                </Link>
+              ))}
+            </MenuList>
+          </Paper>
+        </div>
       </ClickAwayListener>
     </>
   );

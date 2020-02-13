@@ -1,4 +1,5 @@
 // See https://github.com/mui-org/material-ui/tree/master/examples/gatsby
+// NOTE: This must be the first import
 import "./installMuiStyles";
 import React from "react";
 import { StylesProvider, ThemeProvider } from "@material-ui/styles";

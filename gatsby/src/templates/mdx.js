@@ -1,3 +1,4 @@
+// NOTE: This must be the first import
 import withRoot from "../utils/withRoot";
 import React from "react";
 import { graphql, Link } from "gatsby";

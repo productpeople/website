@@ -9,7 +9,6 @@ const styles = theme => ({
   root: {},
   cardRoot: {
     padding: "100px 0px",
-    background: "#FFFFFF",
     boxShadow: "0px 2px 50px rgba(0, 0, 0, 0.02)",
     borderRadius: 6,
     maxHeight: 580,

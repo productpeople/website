@@ -4,10 +4,8 @@ import MenuList from "@material-ui/core/MenuList";
 import MenuItem from "@material-ui/core/MenuItem";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import IconButton from "@material-ui/core/IconButton";
-import Grow from "@material-ui/core/Grow";
 import Paper from "@material-ui/core/Paper";
 import makeStyles from "@material-ui/styles/makeStyles";
-import { navigate } from "@reach/router";
 
 import { menuLinks } from "./Menu";
 
@@ -46,8 +44,8 @@ const MenuMobile = () => {
   const classes = useStyles();
   const { menuPaper, menuClosed, menuItemRoot } = classes;
 
-  const handleOpen = () => {
-    setIsOpen(true);
+  const handleButtonClick = () => {
+    setIsOpen(!isOpen);
   };
 
   const handleClose = () => {
@@ -60,12 +58,12 @@ const MenuMobile = () => {
     <>
       <ClickAwayListener onClickAway={handleClose}>
         <div>
-          <IconButton
-            onClick={() => {
-              setIsOpen(!isOpen);
-            }}
-          >
-            <img className={classes.icon} src={src} />
+          <IconButton onClick={handleButtonClick}>
+            <img
+              className={classes.icon}
+              src={src}
+              alt={isOpen ? "Close the menu" : "Open the menu"}
+            />
           </IconButton>
           <Paper className={`${menuPaper} ${isOpen ? "" : menuClosed}`}>
             <MenuList>

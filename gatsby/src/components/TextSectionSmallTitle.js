@@ -3,6 +3,10 @@ import Typography from "@material-ui/core/Typography";
 import makeStyles from "@material-ui/styles/makeStyles";
 
 const useStyles = makeStyles(theme => ({
+  wrapper: {
+    marginTop: -1,
+    paddingTop: 1
+  },
   root: {
     paddingRight: "20px",
     paddingLeft: "20px",
@@ -36,10 +40,14 @@ const TextSectionSmallTitle = props => {
   const { title, text } = props;
   const classes = useStyles();
 
+  const id = title.toLowerCase().replace(/[\W]/g, "");
+
   return (
-    <div className={classes.root}>
-      <Typography classes={{ root: classes.title }}>{title}</Typography>
-      <Typography classes={{ root: classes.text }}>{text}</Typography>
+    <div className={classes.wrapper} id={id}>
+      <div className={classes.root}>
+        <Typography classes={{ root: classes.title }}>{title}</Typography>
+        <Typography classes={{ root: classes.text }}>{text}</Typography>
+      </div>
     </div>
   );
 };

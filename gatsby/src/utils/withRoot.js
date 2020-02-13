@@ -9,6 +9,7 @@ import Hidden from "@material-ui/core/Hidden";
 import { createMuiTheme } from "@material-ui/core";
 import Particles from "react-particles-js";
 
+import { background } from "../../config";
 import particlesConfig from "../particlesjs-config.json";
 
 const theme = createMuiTheme({
@@ -17,6 +18,11 @@ const theme = createMuiTheme({
     fontFamily: ["'Red Hat Display'", "sans-serif"].join(","),
     h1: { fontWeight: 900 },
     h2: { fontWeight: 900 }
+  },
+  palette: {
+    background: {
+      default: background
+    }
   }
 });
 

@@ -4,7 +4,7 @@ import withStyles from "@material-ui/styles/withStyles";
 
 const styles = {
   root: {
-    marginTop: 120,
+    marginTop: 100,
     maxWidth: 750
   },
   image: {

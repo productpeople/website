@@ -1,21 +1,21 @@
-import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import withStyles from '@material-ui/styles/withStyles';
+import React from "react";
+import Grid from "@material-ui/core/Grid";
+import withStyles from "@material-ui/styles/withStyles";
 
 const styles = {
   root: {
-    maxWidth: '750px'
+    maxWidth: "750px"
   },
   image: {
-    width: '100%',
-    margin: 'auto',
-    padding: '40px 25px',
-    filter: 'grayscale(1)',
+    width: "100%",
+    margin: "auto",
+    padding: "40px 25px",
+    filter: "grayscale(1)",
     opacity: 0.5
   },
   grid: {
-    display: 'flex',
-    alignItems: 'center'
+    display: "flex",
+    alignItems: "center"
   }
 };
 

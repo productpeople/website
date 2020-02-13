@@ -32,7 +32,7 @@ const useStyles = makeStyles(
     cardContent: {
       height: "100%",
       width: "100%",
-      padding: "36px 40px"
+      padding: "36px 10px"
     },
     title: {
       fontFamily: theme.typography.fontFamily,

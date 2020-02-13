@@ -24,7 +24,7 @@ exports.createPages = ({ graphql, actions, reporter }) => {
     `
   ).then(result => {
     if (result.errors) {
-      reporter.panicOnBuild("Failed to load mdx query", result.errors);
+      reporter.panicOnBuild("Failed to load mdx query #5CZ50v", result.errors);
     }
 
     const pages = result.data.allMdx.edges;

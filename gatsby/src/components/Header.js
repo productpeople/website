@@ -69,7 +69,12 @@ const Header = () => {
               className={classes.logo}
             />
           </div>
-          <Menu />
+          <Hidden smDown>
+            <Menu />
+          </Hidden>
+          <Hidden mdUp>
+            <MenuMobile />
+          </Hidden>
         </Toolbar>
       </AppBar>
     </div>

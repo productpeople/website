@@ -5,59 +5,62 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import makeStyles from "@material-ui/styles/makeStyles";
 
-const useStyles = makeStyles(theme => ({
-  cardRoot: {
-    width: '331px',
-    background: '#FFFFFF',
-    boxShadow: '0px 2px 50px rgba(0, 0, 0, 0.05)',
-    borderRadius: '5px',
-    margin: '20px',
-    overflow: 'visible'
-  },
-  overlappingBox: {
-    zIndex: '99',
-    transform: 'translate(0, -50%)',
-    margin: '0 auto',
-    background: '#000000',
-    borderRadius: '4px',
-    width: '128px',
-    height: '34px',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  overlappingBoxText: {
-    fontStyle: 'normal',
-    fontWeight: 'bold',
-    fontSize: '12px',
-    lineHeight: '16px',
-    textAlign: 'center',
-    letterSpacing: '0.857143px',
-    color: '#FFFFFF'
-  },
-  title: {
-    fontStyle: 'normal',
-    fontWeight: 700,
-    fontSize: '24px',
-    lineHeight: '28px',
-    textAlign: 'center',
-    letterSpacing: '0.6px',
-    color: '#000000',
-    marginBottom: '21px'
-  },
-  subtitle: {
-    fontStyle: 'normal',
-    fontWeight: 400,
-    fontSize: '16px',
-    lineHeight: '21px',
-    textAlign: 'center',
-    letterSpacing: '1.14286px',
-    color: '#000000'
-  },
-  cardHeader: {
-    padding: '30px'
-  }
-}));
+const useStyles = makeStyles(
+  theme => ({
+    cardRoot: {
+      width: "331px",
+      background: "#FFFFFF",
+      boxShadow: "0px 2px 50px rgba(0, 0, 0, 0.05)",
+      borderRadius: "5px",
+      margin: "20px",
+      overflow: "visible"
+    },
+    overlappingBox: {
+      zIndex: "99",
+      transform: "translate(0, -50%)",
+      margin: "0 auto",
+      backgroundColor: "#000000",
+      borderRadius: "4px",
+      width: "128px",
+      height: "34px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    },
+    overlappingBoxText: {
+      fontStyle: "normal",
+      fontWeight: "bold",
+      fontSize: "12px",
+      lineHeight: "16px",
+      textAlign: "center",
+      letterSpacing: "0.857143px",
+      color: "#FFFFFF"
+    },
+    title: {
+      fontStyle: "normal",
+      fontWeight: 700,
+      fontSize: "24px",
+      lineHeight: "28px",
+      textAlign: "center",
+      letterSpacing: "0.6px",
+      color: "#000000",
+      marginBottom: "21px"
+    },
+    subtitle: {
+      fontStyle: "normal",
+      fontWeight: 400,
+      fontSize: "16px",
+      lineHeight: "21px",
+      textAlign: "center",
+      letterSpacing: "1.14286px",
+      color: "#000000"
+    },
+    cardHeader: {
+      padding: "30px"
+    }
+  }),
+  { index: 1 }
+);
 
 const ServicesCard = props => {
   const { imageURL, overlappingBoxText, title, subtitle } = props;

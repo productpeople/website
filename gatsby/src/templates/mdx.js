@@ -1,3 +1,4 @@
+import withRoot from "../utils/withRoot";
 import React from "react";
 import { graphql, Link } from "gatsby";
 import { MDXProvider } from "@mdx-js/react";
@@ -8,7 +9,6 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 
 import { maxWidth } from "../../config";
-import withRoot from "../utils/withRoot";
 import SEO from "../components/SEO";
 import Page from "../components/Page";
 import ButtonBig from "../components/ButtonBig";

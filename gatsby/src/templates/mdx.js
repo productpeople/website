@@ -4,6 +4,7 @@ import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { makeStyles } from "@material-ui/styles";
 import Paper from "@material-ui/core/Paper";
+import Grid from "@material-ui/core/Grid";
 
 import withRoot from "../utils/withRoot";
 import SEO from "../components/SEO";
@@ -22,6 +23,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const components = {
+  Grid,
   Link
 };
 
@@ -33,26 +35,12 @@ const MdxPage = props => {
     frontmatter: { title, noContainer }
   } = props.data.mdx;
 
-  const Content = () => (
-    <MDXProvider components={components}>
-      <MDXRenderer>{body}</MDXRenderer>
-    </MDXProvider>
-  );
-
-  const Container = props => (
-    <Paper className={classes.container}>{props.children}</Paper>
-  );
-
   return (
     <Page>
       <SEO title={title} />
-      {noContainer ? (
-        <Content />
-      ) : (
-        <Container>
-          <Content />
-        </Container>
-      )}
+      <MDXProvider components={components}>
+        <MDXRenderer>{body}</MDXRenderer>
+      </MDXProvider>
     </Page>
   );
 };
@@ -62,7 +50,6 @@ export const query = graphql`
     mdx(id: { eq: $id }) {
       frontmatter {
         title
-        noContainer
       }
       body
     }

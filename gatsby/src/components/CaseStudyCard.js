@@ -45,25 +45,27 @@ const styles = theme => ({
   }
 });
 
-const CaseStudyCard = ({ classes, item = {} }) => {
+const CaseStudyCard = props => {
+  const { classes, title, imgHeight, imgURL, subtitle } = props;
+
   return (
     <Card className={classes.root}>
       <CardActionArea>
         <CardMedia
           className={classes.cardMedia}
           component="img"
-          alt={item.title}
-          height={item.imgHeight}
+          alt={title}
+          height={imgHeight}
           // src={withPrefix(imgURL)}
-          src={item.imgURL}
-          title={item.title}
+          src={imgURL}
+          title={title}
         />
         <CardContent className={classes.cardHeader}>
           <Typography classes={{ root: classes.cardTitle }} component="h2">
-            {item.title}
+            {title}
           </Typography>
           <Typography classes={{ root: classes.cardSubtitle }} component="h3">
-            {item.subtitle}
+            {subtitle}
           </Typography>
         </CardContent>
       </CardActionArea>

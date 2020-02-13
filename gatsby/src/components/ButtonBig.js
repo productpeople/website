@@ -12,7 +12,10 @@ const styles = {
     display: "block",
     marginLeft: "auto",
     marginRight: "auto",
-    marginTop: "48px"
+    marginTop: "48px",
+    "&:hover": {
+      background: "#323FD0"
+    }
   },
   text: {
     // fontFamily: "Red Hat Display",

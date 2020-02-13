@@ -24,7 +24,6 @@ const styles = {
 
 export const GridContainer = withStyles(styles)(props => {
   const { classes, children } = props;
-  console.log(children);
   return (
     <div className={classes.root}>
       <Grid container justify="center">

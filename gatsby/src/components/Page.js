@@ -1,9 +1,12 @@
 import React from "react";
+import { Grid, Typography } from "@material-ui/core";
+import { makeStyles } from "@material-ui/styles";
+import CookieBanner from "react-cookie-banner";
+
+import "../css/style.styl";
+
 import Header from "./Header";
 import Footer from "./Footer";
-import { Grid, Typography } from "@material-ui/core";
-import "../css/style.styl";
-import { makeStyles } from "@material-ui/styles";
 
 const useStyles = makeStyles(
   theme => ({
@@ -46,6 +49,27 @@ const Page = props => {
           <Footer />
         </Grid>
       </Grid>
+      <CookieBanner
+        message="Cookies help us to improve. By continuing to browse the site you're accepting our cookies."
+        dismissOnScroll={true}
+        styles={{
+          banner: {
+            position: "fixed",
+            bottom: 0,
+            background: "#F2F2F2",
+            padding: 4,
+            height: ""
+          },
+          message: {
+            color: "#9B9B9B",
+            lineHeight: ""
+          },
+          button: {
+            display: "none"
+          }
+        }}
+        // buttonMessage="Well well well"
+      />
     </>
   );
 };

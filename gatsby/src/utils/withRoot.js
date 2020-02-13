@@ -7,6 +7,9 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import getPageContext from "./getPageContext";
 import Hidden from "@material-ui/core/Hidden";
 import { createMuiTheme } from "@material-ui/core";
+import Particles from "react-particles-js";
+
+import particlesConfig from "../particlesjs-config.json";
 
 const theme = createMuiTheme({
   monoFont: "'Roboto Mono',monospace",
@@ -43,6 +46,7 @@ function withRoot(Component) {
           <ThemeProvider theme={theme}>
             {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
             <CssBaseline />
+            <Particles style={styles.particles} params={particlesConfig} />
             <Hidden implementation="css">
               <Component {...this.props} />
             </Hidden>
@@ -56,3 +60,14 @@ function withRoot(Component) {
 }
 
 export default withRoot;
+
+const styles = {
+  particles: {
+    zIndex: -10,
+    position: "fixed",
+    top: 0,
+    left: 0,
+    width: "100vw",
+    height: "100vh"
+  }
+};

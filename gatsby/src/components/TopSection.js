@@ -5,6 +5,8 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import withStyles from "@material-ui/styles/withStyles";
 
+import { scheduleACallURL } from "../../config";
+
 const styles = theme => ({
   root: {},
   cardRoot: {
@@ -46,7 +48,11 @@ const TopSection = props => {
           <Typography classes={{ root: classes.title }} component="h1">
             {titleText}
           </Typography>
-          <ButtonBig className={classes.button} text={buttonText} />
+          <ButtonBig
+            className={classes.button}
+            text={buttonText}
+            link={scheduleACallURL}
+          />
         </CardContent>
       </Card>
     </div>

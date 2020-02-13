@@ -3,6 +3,8 @@ import { Link } from "gatsby";
 import Button from "@material-ui/core/Button";
 import makeStyles from "@material-ui/styles/makeStyles";
 
+import { scheduleACallURL } from "../../config";
+
 const useStyles = makeStyles(
   theme => ({
     menuButton: {
@@ -62,14 +64,21 @@ const Menu = props => {
           <Button classes={{ root: menuButton }}>{link.name}</Button>
         </Link>
       ))}
-      <Button
-        classes={{
-          root: `${menuButton} ${bigButton}`,
-          label: `${text} ${bigButtonText}`
-        }}
+      <a
+        schedule
+        href={scheduleACallURL}
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        Schedule a call
-      </Button>
+        <Button
+          classes={{
+            root: `${menuButton} ${bigButton}`,
+            label: `${text} ${bigButtonText}`
+          }}
+        >
+          Schedule a call
+        </Button>
+      </a>
     </>
   );
 };

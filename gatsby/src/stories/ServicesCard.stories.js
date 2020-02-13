@@ -1,7 +1,7 @@
 import React from 'react';
-import CardServices from '../components/CardServices';
+import ServicesCard from '../components/ServicesCard';
 
-export default { title: 'CardServices' };
+export default { title: 'ServicesCard' };
 
 const items = [
   {
@@ -24,6 +24,6 @@ const items = [
   }
 ];
 
-export const First = () => <CardServices {...items[0]} />;
-export const Second = () => <CardServices {...items[1]} />;
-export const Third = () => <CardServices {...items[2]} />;
+export const First = () => <ServicesCard {...items[0]} />;
+export const Second = () => <ServicesCard {...items[1]} />;
+export const Third = () => <ServicesCard {...items[2]} />;

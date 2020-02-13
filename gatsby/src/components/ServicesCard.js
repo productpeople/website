@@ -59,7 +59,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const CardServices = props => {
+const ServicesCard = props => {
   const { imageURL, overlappingBoxText, title, subtitle } = props;
   const classes = useStyles();
   return (
@@ -90,4 +90,4 @@ const CardServices = props => {
   );
 };
 
-export default CardServices;
+export default ServicesCard;

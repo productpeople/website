@@ -8,7 +8,7 @@ import makeStyles from "@material-ui/styles/makeStyles";
 const useStyles = makeStyles(
   theme => ({
     cardRoot: {
-      width: "331px",
+      maxWidth: "331px",
       background: "#FFFFFF",
       boxShadow: "0px 2px 50px rgba(0, 0, 0, 0.05)",
       borderRadius: "5px",

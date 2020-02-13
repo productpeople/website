@@ -11,7 +11,7 @@ import withStyles from "@material-ui/styles/withStyles";
 const styles = theme => ({
   root: {
     borderRadius: "6px 6px 6px 6px",
-    width: "331px",
+    maxWidth: "331px",
     // margin: "20px"
     marginLeft: "auto",
     marginRight: "auto",

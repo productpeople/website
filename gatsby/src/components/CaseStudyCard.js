@@ -12,7 +12,10 @@ const styles = theme => ({
   root: {
     borderRadius: "6px 6px 6px 6px",
     width: "331px",
-    margin: "20px"
+    // margin: "20px"
+    marginLeft: "auto",
+    marginRight: "auto",
+    marginTop: 40
   },
   cardHeader: {
     height: "100px",

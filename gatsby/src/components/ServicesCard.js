@@ -15,7 +15,8 @@ const useStyles = makeStyles(
       // margin: "20px",
       overflow: "visible",
       marginLeft: "auto",
-      marginRight: "auto"
+      marginRight: "auto",
+      marginTop: 40
     },
     overlappingBox: {
       zIndex: "99",

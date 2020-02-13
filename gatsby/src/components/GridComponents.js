@@ -34,7 +34,7 @@ export const GridContainer = withStyles(styles)(props => {
 export const GridItemImage = withStyles(styles)(props => {
   const { classes, imageURL, altText } = props;
   return (
-    <Grid className={classes.grid} item xs={6} sm={4}>
+    <Grid className={classes.grid} item xs={6} md={4}>
       <img className={classes.image} src={imageURL} alt={altText} />
     </Grid>
   );

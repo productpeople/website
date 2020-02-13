@@ -10,8 +10,8 @@ const styles = {
     marginTop: 94
   },
   contentBox: {
-    maxWidth: "calc(1136px - 60px)",
-    width: "calc(100% - 60px)"
+    maxWidth: "calc(1136px - 44px)",
+    width: "calc(100% - 44px)"
   },
   title: {
     textAlign: "center"

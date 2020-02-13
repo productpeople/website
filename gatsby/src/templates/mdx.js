@@ -6,6 +6,7 @@ import { makeStyles } from "@material-ui/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/GridList";
 
+import { maxWidth } from "../../config";
 import withRoot from "../utils/withRoot";
 import SEO from "../components/SEO";
 import Page from "../components/Page";
@@ -23,7 +24,7 @@ import TopSection from "../components/TopSection";
 
 const useStyles = makeStyles(theme => ({
   container: {
-    maxWidth: 600,
+    maxWidth,
     padding: theme.spacing.unit * 2,
     marginLeft: "auto",
     marginRight: "auto"
@@ -60,9 +61,11 @@ const MdxPage = props => {
   return (
     <Page>
       <SEO title={title} />
-      <MDXProvider components={components}>
-        <MDXRenderer>{body}</MDXRenderer>
-      </MDXProvider>
+      <div className={classes.container}>
+        <MDXProvider components={components}>
+          <MDXRenderer>{body}</MDXRenderer>
+        </MDXProvider>
+      </div>
     </Page>
   );
 };

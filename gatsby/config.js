@@ -1,4 +1,4 @@
 module.exports = {
   title: "Product People",
-  maxWidth: 960
+  maxWidth: 1224
 };

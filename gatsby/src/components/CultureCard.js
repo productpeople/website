@@ -47,8 +47,8 @@ const useStyles = makeStyles(
       textAlign: "center"
     },
     listItemText: {
-      fontSize: "18px !important",
-      lineHeight: "32px !important",
+      fontSize: "18px",
+      lineHeight: "32px",
       padding: 0
     }
   }),
@@ -96,6 +96,7 @@ export const CultureCardListItem = props => {
       <ListItemText
         classes={{ root: classes.listItemText }}
         primary={children}
+        disableTypography
       />
     </ListItem>
   );

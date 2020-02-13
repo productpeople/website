@@ -128,15 +128,16 @@ description: Product People
 <ButtonBig text="Join our community" />
 <h2
   style="
-font-style: normal;
-font-weight: bold;
-font-size: 24px;
-line-height: 32px;
-text-align: center;
-letter-spacing: 1px;
-color: black;
-margin-top: 80px;
-margin-bottom: 36px;"
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: black;
+    margin-top: 80px;
+    margin-bottom: 36px;
+  "
 >
   Our speakers come from:
 </h2>
@@ -144,27 +145,66 @@ margin-bottom: 36px;"
   <Grid item xs={12} md={2} />
   <Grid item xs={12} md={8}>
     <GridContainer>
-      <GridItemImage imageURL="/images/logo-omio-2x.png" altText="omio logo" />
-      <GridItemImage imageURL="/images/logo-omio-2x.png" altText="omio logo" />
-      <GridItemImage imageURL="/images/logo-omio-2x.png" altText="omio logo" />
-      <GridItemImage imageURL="/images/logo-omio-2x.png" altText="omio logo" />
-      <GridItemImage imageURL="/images/logo-omio-2x.png" altText="omio logo" />
-      <GridItemImage imageURL="/images/logo-omio-2x.png" altText="omio logo" />
+      <GridItemImage
+        imageURL="/images/omio_logo_black.png"
+        altText="omio logo"
+      />
+      <GridItemImage imageURL="/images/heycar_logo.png" altText="heycar logo" />
+      <GridItemImage imageURL="/images/MOIA_logo.png" altText="MOIA logo" />
+      <GridItemImage
+        imageURL="/images/koerber_digital_logo.png"
+        altText="Koerber Digital logo"
+      />
+      <GridItemImage
+        imageURL="/images/Axel_Springer_logo.png"
+        altText="Axel Springer logo"
+      />
+      <GridItemImage imageURL="/images/avira_logo.png" altText="Avira logo" />
     </GridContainer>
     <ButtonBig text="Speak or host" />
     <TextSectionSmallTitle
       title="CULTURE"
-      text="We’re a small team of smart peopleon a mission to help the world build better products."
+      text="We’re a small team of smart people on a mission to help the world build better products."
     />
   </Grid>
 </Grid>
-<CultureCard imageURL="/images/icon-book2x.png">
-  <CultureCardTitle>What we read</CultureCardTitle>
-  <CultureCardList>
-    <CultureCardListItem>Inspired</CultureCardListItem>
-    <CultureCardListItem>Thinking in Bets</CultureCardListItem>
-    <CultureCardListItem>Make Time</CultureCardListItem>
-    <CultureCardListItem>The Hard Thing About  Hard Things</CultureCardListItem>
-    <CultureCardListItem>Loads of Comics :)</CultureCardListItem>
-  </CultureCardList>
-</CultureCard>
+<Grid container spacing={40} justifyContent="center">
+  <Grid item xs={12} lg={4}>
+    <CultureCard imageURL="/images/icon-book2x.png">
+      <CultureCardTitle>What we read</CultureCardTitle>
+      <CultureCardList>
+        <CultureCardListItem>Inspired</CultureCardListItem>
+        <CultureCardListItem>Thinking in Bets</CultureCardListItem>
+        <CultureCardListItem>Make Time</CultureCardListItem>
+        <CultureCardListItem>
+          The Hard Thing About Hard Things
+        </CultureCardListItem>
+        <CultureCardListItem>Loads of Comics :)</CultureCardListItem>
+      </CultureCardList>
+    </CultureCard>
+  </Grid>
+  <Grid item xs={12} lg={4}>
+    <CultureCard imageURL="/images/icon-principles2x.png">
+      <CultureCardTitle>Our Principles</CultureCardTitle>
+      <CultureCardList>
+        <CultureCardListItem>Do great work</CultureCardListItem>
+        <CultureCardListItem>Learn</CultureCardListItem>
+        <CultureCardListItem>Rinse and Repeat</CultureCardListItem>
+      </CultureCardList>
+    </CultureCard>
+  </Grid>
+</Grid>
+<h2
+  style="
+font-family: Red Hat Display;
+font-weight: 700;
+font-size: 32px;
+line-height: 42px;
+text-align: center;
+letter-spacing: 0.8px;
+color: #000000;
+"
+>
+  Let's do something awesome together
+</h2>
+<ButtonBig text="See open positions" />

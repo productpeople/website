@@ -12,7 +12,11 @@ const styles = theme => ({
     background: "#FFFFFF",
     boxShadow: "0px 2px 50px rgba(0, 0, 0, 0.02) !important",
     borderRadius: 6,
-    maxHeight: 580
+    maxHeight: 580,
+    background: "#FFFFFF",
+    [theme.breakpoints.down("xs")]: {
+      background: "transparent"
+    }
   },
   cardContent: {
     margin: "auto"

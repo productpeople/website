@@ -23,17 +23,20 @@ import { GridContainer, GridItemImage } from "../components/GridComponents";
 import TextSectionSmallTitle from "../components/TextSectionSmallTitle";
 import TopSection from "../components/TopSection";
 
-const useStyles = makeStyles(theme => ({
-  container: {
-    maxWidth,
-    padding: theme.spacing.unit * 2,
-    marginLeft: "auto",
-    marginRight: "auto"
-  },
-  cardMedia: {
-    height: "200px"
-  }
-}));
+const useStyles = makeStyles(
+  theme => ({
+    container: {
+      maxWidth,
+      padding: theme.spacing.unit * 2,
+      marginLeft: "auto",
+      marginRight: "auto"
+    },
+    cardMedia: {
+      height: "200px"
+    }
+  }),
+  { index: 1 }
+);
 
 const components = {
   Paper,

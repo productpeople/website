@@ -9,11 +9,14 @@ import makeStyles from "@material-ui/styles/makeStyles";
 
 import { menuLinks } from "./Menu";
 
-const useStyles = makeStyles(theme => ({
-  dotsVerticalIcon: {
-    color: "#efefef"
-  }
-}));
+const useStyles = makeStyles(
+  theme => ({
+    dotsVerticalIcon: {
+      color: "#efefef"
+    }
+  }),
+  { index: 1 }
+);
 
 const MenuMobile = () => {
   const [anchorEl, setAnchorEl] = useState(null);

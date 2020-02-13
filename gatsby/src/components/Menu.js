@@ -5,11 +5,14 @@ import IconButton from "@material-ui/core/IconButton";
 import { GithubCircle } from "mdi-material-ui";
 import makeStyles from "@material-ui/styles/makeStyles";
 
-const useStyles = makeStyles(theme => ({
-  menuButton: {
-    color: theme.palette.primary.contrastText
-  }
-}));
+const useStyles = makeStyles(
+  theme => ({
+    menuButton: {
+      color: theme.palette.primary.contrastText
+    }
+  }),
+  { index: 1 }
+);
 
 export const menuLinks = [
   {

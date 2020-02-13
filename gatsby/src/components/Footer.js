@@ -6,16 +6,19 @@ import makeStyles from "@material-ui/styles/makeStyles";
 
 import { title } from "../../config";
 
-const useStyles = makeStyles(theme => ({
-  divider: {
-    marginTop: theme.spacing.unit * 6,
-    marginBottom: theme.spacing.unit * 3
-  },
-  footer: {
-    marginBottom: theme.spacing.unit * 3,
-    whiteSpace: "nowrap"
-  }
-}));
+const useStyles = makeStyles(
+  theme => ({
+    divider: {
+      marginTop: theme.spacing.unit * 6,
+      marginBottom: theme.spacing.unit * 3
+    },
+    footer: {
+      marginBottom: theme.spacing.unit * 3,
+      whiteSpace: "nowrap"
+    }
+  }),
+  { index: 1 }
+);
 
 const Footer = () => {
   const classes = useStyles();

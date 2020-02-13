@@ -43,7 +43,10 @@ const useStyles = makeStyles(
       flexGrow: 1
     },
     logo: {
-      maxWidth: 179
+      maxHeight: 37,
+      [theme.breakpoints.up("md")]: {
+        maxHeight: 50
+      }
     }
   }),
   { index: 1 }

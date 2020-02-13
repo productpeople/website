@@ -10,12 +10,14 @@ const styles = theme => ({
   cardRoot: {
     padding: "100px 0px",
     background: "#FFFFFF",
-    boxShadow: "0px 2px 50px rgba(0, 0, 0, 0.02) !important",
+    boxShadow: "0px 2px 50px rgba(0, 0, 0, 0.02)",
     borderRadius: 6,
     maxHeight: 580,
     background: "#FFFFFF",
-    [theme.breakpoints.down("xs")]: {
-      background: "transparent"
+    [theme.breakpoints.down("sm")]: {
+      padding: "90px 0px",
+      background: "transparent",
+      boxShadow: "none"
     }
   },
   cardContent: {
@@ -28,7 +30,7 @@ const styles = theme => ({
     fontWeight: 700,
     fontSize: "56px",
     lineHeight: "70px",
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("sm")]: {
       fontSize: "30px",
       lineHeight: "40px",
       marginBottom: "72px"

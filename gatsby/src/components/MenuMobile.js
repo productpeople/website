@@ -53,7 +53,7 @@ const MenuMobile = () => {
     setIsOpen(false);
   };
 
-  const src = `/images/menu-${isOpen ? "open" : "closed"}.png`;
+  const src = `/images/icon-menu-${isOpen ? "open" : "closed"}.png`;
 
   return (
     <>

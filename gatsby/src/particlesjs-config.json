@@ -4,7 +4,7 @@
       "value": 19,
       "density": {
         "enable": true,
-        "value_area": 1443.0708547789707
+        "value_area": 1400
       }
     },
     "color": {
@@ -59,7 +59,7 @@
       "random": false,
       "straight": false,
       "out_mode": "out",
-      "bounce": false,
+      "bounce": true,
       "attract": {
         "enable": false,
         "rotateX": 600,
@@ -92,7 +92,7 @@
         "size": 40,
         "duration": 2,
         "opacity": 8,
-        "speed": 3
+        "speed": 2
       },
       "repulse": {
         "distance": 200,

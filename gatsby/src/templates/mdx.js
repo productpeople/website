@@ -62,14 +62,14 @@ const MdxPage = props => {
 
   const {
     body,
-    frontmatter: { title, images_331, images_146 }
+    frontmatter: { title, images_331, images_185 }
   } = props.data.mdx;
 
   const components = {
     ...baseComponents,
     ServicesCard: ServicesCardFactory(images_331),
     CaseStudyCard: CaseStudyCardFactory(images_331),
-    GridItemImage: GridItemImageFactory(images_146)
+    GridItemImage: GridItemImageFactory(images_185)
   };
 
   return (
@@ -97,11 +97,11 @@ export const query = graphql`
             }
           }
         }
-        images_146 {
+        images_185 {
           relativePath
           childImageSharp {
-            fixed(width: 146) {
-              ...GatsbyImageSharpFixed
+            fluid(maxWidth: 185) {
+              ...GatsbyImageSharpFluid
             }
           }
         }

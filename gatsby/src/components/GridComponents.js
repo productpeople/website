@@ -9,17 +9,19 @@ const useStyles = makeStyles(
       marginTop: 100,
       maxWidth: 750
     },
-    image: {
+    imageContainer: {
       width: "100%",
-      // We add double the horizontal padding to the max width
-      maxWidth: 185 + 25 + 25,
+      maxWidth: 185,
       margin: "auto",
-      padding: "40px 25px",
+      // padding: "40px 25px",
       filter: "grayscale(1)",
       opacity: 0.5
     },
     grid: {
+      // We add double the horizontal padding to the max width
+      maxWidth: 185 + 25 + 25,
       display: "flex",
+      padding: "40px 25px",
       alignItems: "center"
     }
   },
@@ -50,7 +52,12 @@ export const GridItemImageFactory = images => {
 
     return (
       <Grid className={classes.grid} item xs={6} md={4}>
-        <Img fixed={image.childImageSharp.fixed} alt={altText} />
+        <Img
+          className={classes.imageContainer}
+          fixed={image.childImageSharp.fixed}
+          fluid={image.childImageSharp.fluid}
+          alt={altText}
+        />
       </Grid>
     );
   };

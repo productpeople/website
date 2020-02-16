@@ -8,13 +8,15 @@ import Menu from "./Menu";
 import MenuMobile from "./MenuMobile";
 import makeStyles from "@material-ui/styles/makeStyles";
 
+import { background } from "../../config";
+
 const useStyles = makeStyles(
   theme => ({
     container: {
       // flexGrow: 1
     },
     appBar: {
-      backgroundColor: "transparent",
+      backgroundColor: background,
       boxShadow: "none"
     },
     toolbar: {

@@ -64,12 +64,7 @@ const Menu = props => {
           <Button classes={{ root: menuButton }}>{link.name}</Button>
         </Link>
       ))}
-      <a
-        schedule
-        href={scheduleACallURL}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href={scheduleACallURL} target="_blank" rel="noopener noreferrer">
         <Button
           classes={{
             root: `${menuButton} ${bigButton}`,

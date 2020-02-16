@@ -25,7 +25,7 @@ const useStyles = makeStyles(
       textAlign: "center"
     },
     cardMedia: {
-      height: 33,
+      height: 35,
       width: 35,
       margin: "0 auto"
     },

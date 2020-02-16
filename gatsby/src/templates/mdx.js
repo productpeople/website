@@ -13,14 +13,17 @@ import { maxWidth } from "../../config";
 import SEO from "../components/SEO";
 import Page from "../components/Page";
 import ButtonBig from "../components/ButtonBig";
-import ServicesCard from "../components/ServicesCard";
-import CaseStudyCard from "../components/CaseStudyCard";
+import ServicesCardFactory from "../components/ServicesCard";
+import CaseStudyCardFactory from "../components/CaseStudyCard";
 import CultureCard, {
   CultureCardTitle,
   CultureCardList,
   CultureCardListItem
 } from "../components/CultureCard";
-import { GridContainer, GridItemImage } from "../components/GridComponents";
+import {
+  GridContainer,
+  GridItemImageFactory
+} from "../components/GridComponents";
 import TextSectionSmallTitle from "../components/TextSectionSmallTitle";
 import TopSection from "../components/TopSection";
 
@@ -39,20 +42,17 @@ const useStyles = makeStyles(
   { index: 1 }
 );
 
-const components = {
+const baseComponents = {
   Paper,
   Grid,
   Typography,
   Link,
   ButtonBig,
-  ServicesCard,
-  CaseStudyCard,
   CultureCard,
   CultureCardTitle,
   CultureCardList,
   CultureCardListItem,
   GridContainer,
-  GridItemImage,
   TextSectionSmallTitle,
   TopSection
 };
@@ -62,8 +62,15 @@ const MdxPage = props => {
 
   const {
     body,
-    frontmatter: { title }
+    frontmatter: { title, images_331, images_146 }
   } = props.data.mdx;
+
+  const components = {
+    ...baseComponents,
+    ServicesCard: ServicesCardFactory(images_331),
+    CaseStudyCard: CaseStudyCardFactory(images_331),
+    GridItemImage: GridItemImageFactory(images_146)
+  };
 
   return (
     <Page>
@@ -82,6 +89,22 @@ export const query = graphql`
     mdx(id: { eq: $id }) {
       frontmatter {
         title
+        images_331 {
+          relativePath
+          childImageSharp {
+            fixed(width: 331) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+        images_146 {
+          relativePath
+          childImageSharp {
+            fixed(width: 146) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
       }
       body
     }

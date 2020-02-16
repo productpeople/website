@@ -7,8 +7,10 @@ module.exports = {
   },
   plugins: [
     "gatsby-transformer-remark",
+    "gatsby-transformer-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-stylus",
+    "gatsby-plugin-sharp",
     {
       resolve: "gatsby-plugin-mdx",
       options: {

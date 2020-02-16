@@ -48,12 +48,7 @@ const Header = () => {
 
   return (
     <div className={classes.container}>
-      <AppBar
-        positoin="static"
-        id="appBar"
-        color="transparent"
-        classes={{ root: appBar }}
-      >
+      <AppBar positoin="static" id="appBar" classes={{ root: appBar }}>
         <Toolbar className={classes.toolbar}>
           <Link to="/" className={classes.logoWrapper}>
             <img

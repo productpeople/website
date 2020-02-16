@@ -1,4 +1,5 @@
 import React from "react";
+import Img from "gatsby-image";
 import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
@@ -67,35 +68,45 @@ const useStyles = makeStyles(
   { index: 1 }
 );
 
-const ServicesCard = props => {
-  const { imageURL, overlappingBoxText, title, subtitle } = props;
-  const classes = useStyles();
-  return (
-    <Card className={classes.cardRoot} elevation={0}>
-      <Card className={classes.overlappingBox}>
-        <Typography classes={{ root: classes.overlappingBoxText }}>
-          {overlappingBoxText}
-        </Typography>
+const ServicesCardFactory = images => {
+  const ServicesCard = props => {
+    const { imageURL, overlappingBoxText, title, subtitle } = props;
+    const classes = useStyles();
+
+    debugger;
+    const image = images.find(i => i && i.relativePath === imageURL);
+    if (!image) {
+      return null;
+    }
+
+    return (
+      <Card className={classes.cardRoot} elevation={0}>
+        <Card className={classes.overlappingBox}>
+          <Typography classes={{ root: classes.overlappingBoxText }}>
+            {overlappingBoxText}
+          </Typography>
+        </Card>
+        <CardMedia
+          className={classes.cardMedia}
+          component={() => <Img fixed={image.childImageSharp.fixed} />}
+          alt={title}
+          // height={"auto"}
+          // src={withPrefix(imgURL)}
+          src={imageURL}
+          title={title}
+        />
+        <CardContent classes={{ root: classes.cardHeader }}>
+          <Typography classes={{ root: classes.title }} component="h1">
+            {title}
+          </Typography>
+          <Typography classes={{ root: classes.subtitle }} component="h1">
+            {subtitle}
+          </Typography>
+        </CardContent>
       </Card>
-      <CardMedia
-        className={classes.cardMedia}
-        component="img"
-        alt={title}
-        height={"auto"}
-        // src={withPrefix(imgURL)}
-        src={imageURL}
-        title={title}
-      />
-      <CardContent classes={{ root: classes.cardHeader }}>
-        <Typography classes={{ root: classes.title }} component="h1">
-          {title}
-        </Typography>
-        <Typography classes={{ root: classes.subtitle }} component="h1">
-          {subtitle}
-        </Typography>
-      </CardContent>
-    </Card>
-  );
+    );
+  };
+  return ServicesCard;
 };
 
-export default ServicesCard;
+export default ServicesCardFactory;

@@ -73,7 +73,6 @@ const ServicesCardFactory = images => {
     const { imageURL, overlappingBoxText, title, subtitle } = props;
     const classes = useStyles();
 
-    debugger;
     const image = images.find(i => i && i.relativePath === imageURL);
     if (!image) {
       return null;

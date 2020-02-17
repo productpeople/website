@@ -40,12 +40,12 @@ module.exports = {
       resolve: "gatsby-plugin-manifest",
       options: {
         name: `Product People`,
-        short_name: `Product People`
-        // start_url: `/`,
-        // background_color: `#f2f2f2`,
-        // display: "browser",
-        // theme_color: "#ffffff"
-        // icon: `static/images/favicon.png`
+        short_name: `Product People`,
+        start_url: `/`,
+        background_color: `#f2f2f2`,
+        display: "browser",
+        // theme_color: "#ffffff",
+        icon: `static/images/favicon.png`
       }
     }
   ]

@@ -35,6 +35,18 @@ module.exports = {
         name: "pages"
       }
     },
-    "gatsby-plugin-remove-serviceworker"
+    "gatsby-plugin-remove-serviceworker",
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: `Product People`,
+        short_name: `Product People`,
+        start_url: `/`,
+        background_color: `#f2f2f2`,
+        display: "browser",
+        theme_color: "#ffffff",
+        icon: `static/images/favicon.png`
+      }
+    }
   ]
 };

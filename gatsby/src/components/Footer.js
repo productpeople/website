@@ -143,7 +143,7 @@ const Footer = () => {
                   </a>
                 </div>
                 <div className={classes.quickLinksListItem}>
-                  <a className={classes.quickLinksLink} href="#CAPABILITIES">
+                  <a className={classes.quickLinksLink} href="#capabilities">
                     Capabilities
                   </a>
                 </div>

@@ -155,9 +155,9 @@ const Footer = () => {
                 <div className={classes.quickLinksListItem}>
                   <a
                     className={classes.quickLinksLink}
-                    href="#meetupsandevents"
+                    href="#communityevents"
                   >
-                    Events
+                    Community
                   </a>
                 </div>
               </div>

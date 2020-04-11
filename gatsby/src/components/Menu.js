@@ -45,7 +45,7 @@ export const menuLinks = [
   },
   {
     name: "Community",
-    link: "/#meetupsandevents"
+    link: "/#communityevents"
   },
   {
     name: "Culture",

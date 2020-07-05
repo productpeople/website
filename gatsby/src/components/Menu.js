@@ -40,12 +40,12 @@ const useStyles = makeStyles(
 
 export const menuLinks = [
   {
-    name: "Services",
-    link: "/#services"
+    name: "Capabilities",
+    link: "/#capabilities"
   },
   {
-    name: "Events",
-    link: "/#meetupsandevents"
+    name: "Community",
+    link: "/#communityevents"
   },
   {
     name: "Culture",

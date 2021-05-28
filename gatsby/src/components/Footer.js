@@ -7,7 +7,7 @@ import Grid from "@material-ui/core/Grid";
 
 import makeStyles from "@material-ui/styles/makeStyles";
 
-import { imprintPath, termsPath, privacyPath } from "../../config";
+import { imprintPath, termsPath, teamPath } from "../../config";
 
 const useStyles = makeStyles(
   theme => ({
@@ -178,8 +178,8 @@ const Footer = () => {
                   </a>
                 </div>
                 <div className={classes.quickLinksListItem}>
-                  <a className={classes.quickLinksLink} href={privacyPath}>
-                    Privacy
+                  <a className={classes.quickLinksLink} href={teamPath}>
+                    Team
                   </a>
                 </div>
               </div>

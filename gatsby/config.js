@@ -5,5 +5,5 @@ module.exports = {
   scheduleACallURL: "https://calendly.com/productpeople/client",
   imprintPath: "/imprint",
   termsPath: "/terms",
-  privacyPath: "/privacy"
+    teamPath: "/team"
 };

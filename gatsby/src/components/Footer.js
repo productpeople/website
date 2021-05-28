@@ -168,8 +168,8 @@ const Footer = () => {
                   </a>
                 </div>
                 <div className={classes.quickLinksListItem}>
-                  <a className={classes.quickLinksLink} href={imprintPath}>
-                    Imprint
+                  <a className={classes.quickLinksLink} href={teamPath}>
+                    Team
                   </a>
                 </div>
                 <div className={classes.quickLinksListItem}>
@@ -178,8 +178,8 @@ const Footer = () => {
                   </a>
                 </div>
                 <div className={classes.quickLinksListItem}>
-                  <a className={classes.quickLinksLink} href={teamPath}>
-                    Team
+                  <a className={classes.quickLinksLink} href={imprintPath}>
+                    Imprint
                   </a>
                 </div>
               </div>

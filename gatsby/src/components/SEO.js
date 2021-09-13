@@ -7,14 +7,15 @@ const SEO = props => (
     query={detailsQuery}
     render={data => {
       const title = props.title || data.site.siteMetadata.title;
+      const description = props.description || data.site.siteMetadata.description;
       return (
         <Helmet
           htmlAttributes={{
             lang: "en",
           }}
           title={title}
-          titleTemplate={`%s - ${data.site.siteMetadata.title}`}
         >
+          <meta name="description" content={description} />
           {props.children}
         </Helmet>
       );
@@ -34,7 +35,8 @@ const detailsQuery = graphql`
   query DefaultSEOQuery {
     site {
       siteMetadata {
-        title
+        title,
+        description
       }
     }
   }

@@ -7,7 +7,7 @@ import Grid from "@material-ui/core/Grid";
 
 import makeStyles from "@material-ui/styles/makeStyles";
 
-import { imprintPath, termsPath, teamPath } from "../../config";
+import { imprintPath, termsPath } from "../../config";
 
 const useStyles = makeStyles(
   theme => ({
@@ -168,11 +168,6 @@ const Footer = () => {
                   </a>
                 </div>
                 <div className={classes.quickLinksListItem}>
-                  <a className={classes.quickLinksLink} href={teamPath}>
-                    Team
-                  </a>
-                </div>
-                <div className={classes.quickLinksListItem}>
                   <a className={classes.quickLinksLink} href={termsPath}>
                     Terms
                   </a>
@@ -180,6 +175,11 @@ const Footer = () => {
                 <div className={classes.quickLinksListItem}>
                   <a className={classes.quickLinksLink} href={imprintPath}>
                     Imprint
+                  </a>
+                </div>
+                <div className={classes.quickLinksListItem}>
+                  <a className={classes.quickLinksLink} href="https://www.notion.so/getproductpeople/Style-Guide-Product-People-6a71060028a14edfa000b900d5e6466e" target="_blank" rel="noopener noreferrer">
+                    Brand Assets
                   </a>
                 </div>
               </div>

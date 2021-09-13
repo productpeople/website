@@ -3,7 +3,8 @@ const config = require("./config");
 module.exports = {
   pathPrefix: "/gatsby-material-ui-business-starter",
   siteMetadata: {
-    title: config.title
+    title: config.title,
+    description: config.description
   },
   plugins: [
     "gatsby-transformer-remark",

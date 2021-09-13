@@ -45,7 +45,7 @@ const TopSection = props => {
     <div className={classes.root}>
       <Card classes={{ root: classes.cardRoot }} elevation={0}>
         <CardContent className={classes.cardContent}>
-          <Typography classes={{ root: classes.title }} component="h1">
+          <Typography classes={{ root: classes.title }} component="h2">
             {titleText}
           </Typography>
           <ButtonBig

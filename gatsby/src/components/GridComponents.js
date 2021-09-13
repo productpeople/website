@@ -6,8 +6,7 @@ import { makeStyles } from "@material-ui/styles";
 const useStyles = makeStyles(
   {
     root: {
-      marginTop: 100,
-      maxWidth: 750
+      marginTop: 40,
     },
     imageContainer: {
       width: "100%",
@@ -51,7 +50,7 @@ export const GridItemImageFactory = images => {
     }
 
     return (
-      <Grid className={classes.grid} item xs={6} md={4}>
+      <Grid className={classes.grid} item xs={6} md={3}>
         <Img
           className={classes.imageContainer}
           fixed={image.childImageSharp.fixed}

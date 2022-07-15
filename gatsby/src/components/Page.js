@@ -51,7 +51,7 @@ const Page = props => {
       </Grid>
       <CookieBanner
         message="Cookies help us to improve. By continuing to browse the site you're accepting our cookies."
-        dismissOnScroll={true}
+        dismissOnScroll={false}
         styles={{
           banner: {
             position: "fixed",

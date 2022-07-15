@@ -1,7 +1,8 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
-import CookieBanner from "react-cookie-banner";
+//import CookieBanner from "react-cookie-banner";
+import CookieConsent from "react-cookie-consent";
 
 import "../css/style.styl";
 
@@ -49,9 +50,9 @@ const Page = props => {
           <Footer />
         </Grid>
       </Grid>
-      <CookieBanner
-        message="Cookies help us to improve. By continuing to browse the site you're accepting our cookies."
-        dismissOnScroll={false}
+      {/* <CookieBanner
+        message="Cookies help us to improve. By continuing to browse the site you're accepting our cookies ."
+        dismissOnScroll={true}
         styles={{
           banner: {
             position: "fixed",
@@ -69,7 +70,19 @@ const Page = props => {
           }
         }}
         // buttonMessage="Well well well"
-      />
+      /> */}
+      <CookieConsent>This website uses cookies to enhance the user experience.</CookieConsent>
+      <CookieConsent
+        location="bottom"
+        buttonText="Accept"
+        cookieName="Cookie Policy"
+        style={{ background: "#2B373B" }}
+        buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+        expires={150}
+      >
+        This website uses cookies to enhance the user experience.{" "}
+        <span style={{ fontSize: "10px" }}>This bit of text is smaller :O</span>
+      </CookieConsent>
     </>
   );
 };

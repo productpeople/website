@@ -51,8 +51,8 @@ const Page = props => {
       </Grid>
       <CookieBanner
         message="Cookies help us to improve. By continuing to browse the site you're accepting our cookies."
-        dismissOnScroll= {true}
-        dismissOnScrollThreshold= {100}
+        dismissOnScroll= {false}
+        dismissOnScrollThreshold= {400}
         //dismissOnClick={false}
         //onAccept={() => {}}
         //cookie="user-has-accepted-cookies"

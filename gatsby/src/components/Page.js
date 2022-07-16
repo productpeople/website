@@ -69,7 +69,7 @@ const Page = props => {
         //   button: {
         //     display: "none"
         //   }
-        }}
+        // }}
         // buttonMessage="Well well well"
       />
     </>

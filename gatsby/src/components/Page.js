@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
+import { NavLink } from "react-router-dom";
 import CookieBanner from "react-cookie-banner";
 
 import "../css/style.styl";
@@ -50,15 +51,7 @@ const Page = props => {
         </Grid>
       </Grid>
       <CookieBanner
-        message="Cookies help us to improve. By continuing to browse the site you're accepting our cookies.{link}"
-          values={{
-            link: <a href="google.com">
-              <message
-                id="link"
-                message="Learn More"
-              />
-                  </a>
-           }}
+        message="Cookies help us to improve. By continuing to browse the site you're accepting our cookies."
         dismissOnScroll= {false}
         dismissOnScrollThreshold= {400}
         //dismissOnClick={false}

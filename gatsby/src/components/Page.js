@@ -51,14 +51,16 @@ const Page = props => {
         </Grid>
       </Grid>
       <CookieBanner
-        dismissOnScroll= {false}
-        dismissOnScrollThreshold= {400}
+        message="Cookies help us to improve. By continuing to browse the site you're accepting our cookies."
+        //dismissOnScroll= {false}
+        //dismissOnScrollThreshold= {400}
         //dismissOnClick={false}
         //onAccept={() => {}}
         //cookie="user-has-accepted-cookies"
+        expires={365}
         styles={{
           banner: { background: '#F5F6FF', position: 'fixed', bottom: 0, color: 'white',  padding: 4 , height: "" },
-          //message: { fontWeight: 500, color: '#000000', font: 'Red Hat Display' },
+          message: { fontWeight: 500, color: '#000000', font: 'Red Hat Display' },
           button: {display:"none"}
         }}
         
@@ -81,7 +83,6 @@ const Page = props => {
         // }}
        // buttonMessage="Accept"
       />
-        Cookies help us to improve. By continuing to browse the site you're accepting our cookies.<a href="#">Learn More.</a>
     </>
   );
 };

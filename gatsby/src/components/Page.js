@@ -50,14 +50,16 @@ const Page = props => {
         </Grid>
       </Grid>
       <CookieBanner
-        message="Cookies help us to improve. By continuing to browse the site you're accepting our cookies.{link}"
-          values={{
-            link:<a href="https://www.freeprivacypolicy.com/free-cookie-consent/">
-              <message
-                id="link"
-                message="Learn More."
-              />
-                </a>
+        FormattedMessage
+              id="text"
+              defaultMessage="Cookies help us to improve. By continuing to browse the site you're accepting our cookies.{link}"
+              values={{
+                  link: <a href="google.com">
+                      <FormattedMessage
+                          id="link"
+                          defaultMessage="Learn More"
+                      />
+                  </a>
               }}
         dismissOnScroll= {false}
         dismissOnScrollThreshold= {400}

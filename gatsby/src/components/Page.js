@@ -50,7 +50,15 @@ const Page = props => {
         </Grid>
       </Grid>
       <CookieBanner
-        message="Cookies help us to improve. By continuing to browse the site you're accepting our cookies."
+        message="Cookies help us to improve. By continuing to browse the site you're accepting our cookies.{link}"
+          values={{
+            link: <a href="https://clients.getproductpeople.com/legal-cookie-policy-product-people">
+              <message
+                  id="link"
+                  Message="Learn More."
+              />
+            </a>
+           }}
         dismissOnScroll= {false}
         dismissOnScrollThreshold= {400}
         //dismissOnClick={false}

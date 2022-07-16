@@ -50,17 +50,15 @@ const Page = props => {
         </Grid>
       </Grid>
       <CookieBanner
-        FormattedMessage
-              id="text"
-              defaultMessage="Cookies help us to improve. By continuing to browse the site you're accepting our cookies.{link}"
-              values={{
-                  link: <a href="google.com">
-                      <FormattedMessage
-                          id="link"
-                          defaultMessage="Learn More"
-                      />
+        message="Cookies help us to improve. By continuing to browse the site you're accepting our cookies.{link}"
+          values={{
+            link: <a href="google.com">
+              <message
+                id="link"
+                message="Learn More"
+              />
                   </a>
-              }}
+           }}
         dismissOnScroll= {false}
         dismissOnScrollThreshold= {400}
         //dismissOnClick={false}
@@ -68,7 +66,7 @@ const Page = props => {
         //cookie="user-has-accepted-cookies"
         styles={{
           banner: { background: '#F5F6FF', position: 'fixed', bottom: 0, color: 'white',  padding: 4 , height: "" },
-          FormattedMessage: { fontWeight: 500, color: '#000000', font: 'Red Hat Display' },
+          message: { fontWeight: 500, color: '#000000', font: 'Red Hat Display' },
           button: {display:"none"}
         }}
         

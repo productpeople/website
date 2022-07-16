@@ -50,8 +50,8 @@ const Page = props => {
         </Grid>
       </Grid>
       <CookieBanner
-        message="Cookies help us to improve. By continuing to browse the site you're accepting our cookies."
-        dismissOnClick={false}
+        message="Cookies help us to improve. By continuing to browse the site you're accepting our cookies.<a className='https://clients.getproductpeople.com/legal-cookie-policy-product-people'>Learn more.</a>"
+        //dismissOnClick={false}
         //onAccept={() => {}}
         //cookie="user-has-accepted-cookies"
         styles={{

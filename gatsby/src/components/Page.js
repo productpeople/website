@@ -54,23 +54,23 @@ const Page = props => {
         // dismissOnScroll={true}
         onAccept={() => {}}
         cookie="user-has-accepted-cookies"
-        // styles={{
-        //   banner: {
-        //     position: "fixed",
-        //     bottom: 0,
-        //     background: "#F2F2F2",
-        //     padding: 4,
-        //     height: ""
-        //   },
-        //   message: {
-        //     color: "#9B9B9B",
-        //     lineHeight: ""
-        //   },
-        //   button: {
-        //     display: "none"
-        //   }
-        // }}
-        // buttonMessage="Well well well"
+        styles={{
+          banner: {
+            position: "fixed",
+            bottom: 0,
+            background: "#F2F2F2",
+            padding: 4,
+            height: ""
+          },
+          message: {
+            color: "#9B9B9B",
+            lineHeight: ""
+          },
+          button: {
+            display: "none"
+          }
+        }}
+        buttonMessage="Accept"
       />
     </>
   );

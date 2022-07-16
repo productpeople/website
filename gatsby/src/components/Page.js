@@ -63,7 +63,6 @@ const Page = props => {
           message: { fontWeight: 500, color: '#000000', font: 'Red Hat Display' },
           button: {display:"none"}
         }}
-        
       
         // styles={{
         //   banner: {

@@ -55,7 +55,7 @@ const Page = props => {
             link: <a href="https://clients.getproductpeople.com/legal-cookie-policy-product-people">
               <message
                   id="link"
-                  Message="Learn More."
+                  message="Learn More."
               />
             </a>
            }}

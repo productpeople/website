@@ -55,7 +55,7 @@ const Page = props => {
         //onAccept={() => {}}
         //cookie="user-has-accepted-cookies"
         styles={{
-          banner: { background: '#F5F6FF', position: 'fixed', bottom: 0, color: 'white', padding: '24px 32px' },
+          banner: { background: '#F5F6FF', position: 'fixed', bottom: 0, color: 'white', padding: '24px 32px', height: '300px' },
           message: { fontWeight: 400, color: '#000000' }
         }}
       

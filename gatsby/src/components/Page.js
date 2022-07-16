@@ -65,10 +65,10 @@ const Page = props => {
           message: {
             color: "#9B9B9B",
             lineHeight: ""
-          },
-          button: {
-            display: "none"
           }
+          // button: {
+          //   display: "none"
+          // }
         }}
         buttonMessage="Accept"
       />

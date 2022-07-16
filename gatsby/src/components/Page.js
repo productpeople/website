@@ -56,10 +56,10 @@ const Page = props => {
         //cookie="user-has-accepted-cookies"
         styles={{
           banner: { background: '#F5F6FF', position: 'fixed', bottom: 0, color: 'white', padding: '24px 32px', height: '60px' },
-          message: { fontWeight: 400, color: '#000000', font: 'Red Hat Display' },
-          button: {display:""}
+          message: { fontWeight: 500, color: '#000000', font: 'Red Hat Display' },
+          button: {display:"none"}
         }}
-        buttonMessage="Got it!"
+        
       
         // styles={{
         //   banner: {

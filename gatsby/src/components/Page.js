@@ -52,7 +52,7 @@ const Page = props => {
       <CookieBanner
         message="By clicking Accept All Cookies, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts. View our Privacy Policy for more information."
         dismissOnScroll={false}
-        onAccept={() => {}}
+        // onAccept={() => {}}
         //cookie="user-has-accepted-cookies"
         styles={{
           banner: { background: '#F5F6FF', position: 'fixed', bottom: 0, color: 'white', padding: '24px 32px', height: '75px' },

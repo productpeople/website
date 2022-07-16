@@ -50,12 +50,12 @@ const Page = props => {
         </Grid>
       </Grid>
       <CookieBanner
-        message="Cookies help us to improve. By continuing to browse the site you're accepting our cookies ."
+        message="Cookies help us to improve. By continuing to browse the site you're accepting our cookies!"
         // dismissOnScroll={true}
         onAccept={() => {}}
         cookie="user-has-accepted-cookies"
         styles={{
-          banner: { backgroundColor: 'rgba(60, 60, 60, 0.8)' },
+          banner: { backgroundColor: '#000000' },
           message: { fontWeight: 400 }
         }}
       
@@ -75,7 +75,7 @@ const Page = props => {
         //   //   display: "none"
         //   // }
         // }}
-        buttonMessage="Accept"
+       // buttonMessage="Accept"
       />
     </>
   );

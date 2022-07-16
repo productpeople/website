@@ -51,11 +51,11 @@ const Page = props => {
       </Grid>
       <CookieBanner
         message="By clicking Accept All Cookies, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts. View our Privacy Policy for more information."
-        // dismissOnScroll={true}
-        //onAccept={() => {}}
+        dismissOnScroll={false}
+        onAccept={() => {}}
         //cookie="user-has-accepted-cookies"
         styles={{
-          banner: { background: '#F5F6FF', position: 'fixed', bottom: 0, color: 'white', padding: '24px 32px', height: '150px' },
+          banner: { background: '#F5F6FF', position: 'fixed', bottom: 0, color: 'white', padding: '24px 32px', height: '75px' },
           message: { fontWeight: 400, color: '#000000' }
         }}
       

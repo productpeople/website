@@ -56,7 +56,7 @@ const Page = props => {
         //cookie="user-has-accepted-cookies"
         styles={{
           banner: { background: '#F5F6FF', position: 'fixed', bottom: 0, color: 'white', padding: '24px 32px' },
-          message: { fontWeight: 400 }
+          message: { fontWeight: 400, color: '#000000' }
         }}
       
         // styles={{

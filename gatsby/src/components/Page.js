@@ -55,9 +55,7 @@ const Page = props => {
             link:<a href="https://www.freeprivacypolicy.com/free-cookie-consent/">
               <message
                 id="link"
-                message="Learn More"
-                  id="link"
-                  message="Learn More."
+                message="Learn More."
               />
                 </a>
               }}

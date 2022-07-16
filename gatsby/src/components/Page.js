@@ -55,21 +55,26 @@ const Page = props => {
         onAccept={() => {}}
         cookie="user-has-accepted-cookies"
         styles={{
-          banner: {
-            position: "fixed",
-            bottom: 0,
-            background: "#F2F2F2",
-            padding: 4,
-            height: ""
-          },
-          message: {
-            color: "#9B9B9B",
-            lineHeight: ""
-          }
-          // button: {
-          //   display: "none"
-          // }
+          banner: { backgroundColor: 'rgba(60, 60, 60, 0.8)' },
+          message: { fontWeight: 400 }
         }}
+      
+        // styles={{
+        //   banner: {
+        //     position: "fixed",
+        //     bottom: 0,
+        //     background: "#F2F2F2",
+        //     padding: 4,
+        //     height: ""
+        //   },
+        //   message: {
+        //     color: "#9B9B9B",
+        //     lineHeight: ""
+        //   }
+        //   // button: {
+        //   //   display: "none"
+        //   // }
+        // }}
         buttonMessage="Accept"
       />
     </>

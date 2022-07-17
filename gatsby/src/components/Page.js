@@ -1,7 +1,6 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
-import { NavLink } from "react-router-dom";
 import CookieBanner from "react-cookie-banner";
 
 import "../css/style.styl";

@@ -57,7 +57,7 @@ const Page = props => {
         styles={{
           banner: { background: '#F5F6FF', position: 'fixed', bottom: 0, color: 'white',  padding: 4 , height: "" },
           message: { fontWeight: 500, color: '#000000', font: 'Red Hat Display' },
-          button: {display:""}
+          button: {display:"", paddingright:10}
         }}
          //dismissOnScroll= {false}
         //dismissOnScrollThreshold= {400}

@@ -51,7 +51,7 @@ const Page = props => {
       </Grid>
       <CookieBanner
         message="Cookies help us to improve our site. By continuing to browse the site you're accepting our cookies."
-        expires={600}
+        expires={6000}
         styles={{
           banner: { background: '#F5F6FF', position: 'fixed', bottom: 0, color: 'white',  padding: 4 , height: "" },
           message: { fontWeight: 500, color: '#000000', font: 'Red Hat Display' },
